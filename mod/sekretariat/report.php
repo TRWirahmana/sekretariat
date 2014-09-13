@@ -192,7 +192,7 @@ echo "<table border=0 width=100%>";
 		   $tgl_selesai=date("d-M-Y", strtotime($row['tgl_selesai']));
 		}
 		$tgl_terima=date("d-M-Y", strtotime($row['tgl_terima']));
-		if ($row[12]==0){$bg="#FF7200";} else {$bg="#CCCCCC";}
+		if ($row[12]==0){$bg="#99CCFF";} else {$bg="#CCCCCC";}
 		if ($row[12]==0){$imgdoc="images/docblue.gif";} else {$imgdoc="images/doc1.gif";}
 		echo "<tr bgcolor=$bg><td align=\"center\" valign=\"top\">$no</td><td align=\"center\" valign=\"top\">$row[2]</td><td align=\"center\" valign=\"top\">$row[1]</td><td align=\"left\" valign=\"top\">$no_srt_masuk</td><td valign=\"top\">$tgl_srt</td><td valign=\"top\">$row[5]</td><td valign=\"top\">$row[6]</td><td valign=\"top\">$tgl_terima</td>";?>
 		<td valign="top"><a href="index.php?_mod=sekretariat&task=detail&id=<?php echo $row[0];?>" title="detail"><img border=0 src="<?php echo $imgdoc;?>"</a></td>
