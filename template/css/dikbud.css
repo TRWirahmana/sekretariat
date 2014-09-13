@@ -427,7 +427,7 @@ html, .main-layout, .admin,
   position: relative;
   text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
   overflow: auto;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 .sidebar > header {
   position: relative;

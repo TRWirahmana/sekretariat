@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="template/sekretariat/style.css">
 <script language="JavaScript" src="inc/Calendar/calendar_db.js"></script>
 	<link rel="stylesheet" href="inc/Calendar/calendar.css">
 <?php
@@ -97,7 +97,7 @@ $sql = "SELECT * FROM surat_masuk ";
 	$jml=mysql_num_rows(mysql_query($sql));
 	$pager = new PS_Pagination($conn,$sql,$row_perpage,5,$link);
 	$rs = $pager->paginate();
-echo "Cari Surat Masuk >> </br></br>";
+//echo "Cari Surat Masuk >> </br></br>";
 
 //if ($key=="" && $tgl_surat==""){
 $send_url = "index.php";
@@ -105,34 +105,66 @@ $send_url = "index.php";
 	$send_url = 'index.php?_mod=sekretariat&task=report&act=go&key='.$key.'&tgl_surat='.$tgl_surat;
 	}*/
 ?>
-<table border=0 width="100%" style="border:1px solid #cccccc"><tr><td>
+
 <form action="<?php echo $send_url;?>" method="get" name="form">
-	<table>
-		   <tr><td width="150px">Perihal/Nomor Agenda/No surat/Pengirim</td><td><input type="text" name="key" value="<?php echo $key;?>" size="35"/></td></tr>
-		   <tr><td width="150px">Tanggal Surat</td>
-			<td><input type="text" name="tgl_surat" value="<?php echo $tgl_surat;?>" size="10"/><script language="JavaScript">
-	new tcal ({
-		'formname': 'form',
-		'controlname': 'tgl_surat'
-	});
-	</script>
-			    
-			</td>
-			</tr>
-			<tr><td><input class="button" type="submit" name="submit" value="Proses"/></td></tr>
-			<input type="hidden" name="act" value="go">
-			<input type="hidden" name="_mod" value="sekretariat">
-			<input type="hidden" name="task" value="report">
-			<input type="hidden" name="page" value="1">
-	</table>
+    <div class="row-fluid">
+        <div class="span24">
+            <fieldset>
+                <legend>Cari Surat Masuk >></legend>
+                <div class="nav nav-tabs">
+                    <h3> Daftar Surat Masuk</h3>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label span7">Perihal/Nomor Agenda/No surat/Pengirim</label>
+                    <div class="controls span17">
+                        <input type="text" name="key" value="<?php echo $key;?>" size="35"/>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label span7">Tanggal Surat</label>
+                    <div class="controls span17">
+                        <input type="text" name="tgl_surat" value="<?php echo $tgl_surat;?>" size="10"/><script language="JavaScript">
+                            new tcal ({
+                                'formname': 'form',
+                                'controlname': 'tgl_surat'
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label span7"></label>
+                    <div class="controls span17">
+                        <input class="btn btn-primary" type="submit" name="submit" value="Proses"/>
+                    </div>
+                </div>
+
+
+
+            </fieldset>
+        </div>
+
+    </div>
+
+    <!--<div class="form-actions">-->
+
+    <input type="hidden" name="act" value="go">
+    <input type="hidden" name="_mod" value="sekretariat">
+    <input type="hidden" name="task" value="report">
+    <input type="hidden" name="page" value="1">
+    <!--</div>-->
+
 </form>
-</td></tr>
-</table>
+</div>
+<hr>
 <?php
 extract($_POST);
 
 ?>
-<h2 align="center">DAFTAR SURAT MASUK</h2><?php
+<!--<h2 align="center">DAFTAR SURAT MASUK</h2>-->
+<?php
 echo "<table border=0 width=100%>";
 	echo "<td align=right>";
 	if ($jml!=0){
@@ -160,7 +192,7 @@ echo "<table border=0 width=100%>";
 		   $tgl_selesai=date("d-M-Y", strtotime($row['tgl_selesai']));
 		}
 		$tgl_terima=date("d-M-Y", strtotime($row['tgl_terima']));
-		if ($row[12]==0){$bg="#99CCFF";} else {$bg="#CCCCCC";}
+		if ($row[12]==0){$bg="#FF7200";} else {$bg="#CCCCCC";}
 		if ($row[12]==0){$imgdoc="images/docblue.gif";} else {$imgdoc="images/doc1.gif";}
 		echo "<tr bgcolor=$bg><td align=\"center\" valign=\"top\">$no</td><td align=\"center\" valign=\"top\">$row[2]</td><td align=\"center\" valign=\"top\">$row[1]</td><td align=\"left\" valign=\"top\">$no_srt_masuk</td><td valign=\"top\">$tgl_srt</td><td valign=\"top\">$row[5]</td><td valign=\"top\">$row[6]</td><td valign=\"top\">$tgl_terima</td>";?>
 		<td valign="top"><a href="index.php?_mod=sekretariat&task=detail&id=<?php echo $row[0];?>" title="detail"><img border=0 src="<?php echo $imgdoc;?>"</a></td>
