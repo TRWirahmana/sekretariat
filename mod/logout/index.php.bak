@@ -1,0 +1,14 @@
+<? 
+
+$logout = date('d/m/Y | h:m:s');
+		   $logout .= " | ip : ".$_SERVER['REMOTE_ADDR'];
+
+#$sql_logout = "update t_users set logout='$logout', online='0' where users_id='".$_SESSION['uid']."'";
+#$stm = mysqlExec($sql_logout);
+#echo $sql_logout;	
+		   
+session_destroy();
+page_refresh('index.php');
+
+
+?>

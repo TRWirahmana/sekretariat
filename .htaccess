@@ -1,0 +1,7 @@
+#RewriteEngine On
+#RewriteRule ^([^/]*)\.html$ /core_engine/index.php?_mod=$1 [L]
+#RewriteRule ^([^/]*)/([^/]*)\.html$ /core_engine/index.php?_mod=$1&task=$2 [L]
+#RewriteRule ^([^/]*)/([^/]*)/([^/]*)\.html$ /core_engine/index.php?_mod=$1&task=$2&act=$3 [L]
+#RewriteRule ^([^/]*)/([^/]*)/([^/]*)-([^/]*)\.html$ /core_engine/index.php?_mod=$1&task=$2&act=$3$page=4 [L]
+#RewriteRule ^([^/]*)/([^/]*)/([^/]*)-([^/]*)\.html$ /core_engine/index.php?_mod=$1&task=$2&act=$3$page=4 [L]
+

@@ -1,0 +1,23 @@
+/* CSS Document */
+.table{ border:1ps solid #CCCCCC;}
+.header {font-weight:bold; background-color:#999999;}
+.ganjil {background-color: ##C8C8C8;}
+.genap {background-color: #66CCFF;}
+
+#navlist
+{
+padding-left: 0;
+margin-left: 0;
+border-bottom: 1px solid gray;
+width: 200px;
+}
+
+#navlist li
+{
+list-style: none;
+margin: 0;
+padding: 0.25em;
+border-top: 1px solid gray;
+}
+
+#navlist li a { text-decoration: none; }

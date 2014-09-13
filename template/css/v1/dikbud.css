@@ -1,0 +1,358 @@
+* {
+	font-family: "PT Sans", "pt_sansregular", sans-serif;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-moz-transition: all .2s ease-out;
+	-ms-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	-webkit-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .25);
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb {
+  background: #666666;
+  border-radius: 20px;
+  border: 1px solid #666666;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .15), inset 0 1px 0 rgba(255, 255, 255, .35), inset 0 -1px 0 rgba(255, 255, 255, .15);
+}
+::selection {
+  background: #da4f49;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
+}
+::-moz-selection {
+  background: #da4f49;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
+}
+::-webkit-input-placeholder {
+	font-style: italic;
+}
+:-moz-placeholder {
+	font-style: italic;
+}
+::-moz-placeholder {
+	font-style: italic;
+}
+:-ms-input-placeholder {
+	font-style: italic;
+}
+p {
+	font-size: 13px;
+}
+
+/* SIGN IN PAGE ONLY */
+#sign-in {
+	background: #202020;
+	/*background: url("../img/sidebar-noise-background.jpg") repeat;*/
+}
+#sign-in > .container-fluid {
+	width: 100%;
+	background: url("../img/sign-in-background-01.jpg") no-repeat;
+	background-size: 100%;
+	/*background-size: 100% 580px;
+	min-height: 580px;
+	height: 580px;*/
+	box-shadow: inset 0 -1px 8px rgba(0, 0, 0, .35);
+}
+#sign-in > .container-fluid #logo-wrapper {
+	background: rgba(0, 0, 0, .15);
+	text-align: right;
+	padding: 15px 25px 20px;
+}
+#sign-in > .container-fluid #sign-in-form {
+	margin-top: 220px;
+	margin-bottom: 20px;
+}
+#sign-in > .container-fluid #sign-in-form h3,
+#sign-in > .container-fluid #sign-in-form h1 {
+	font-family: "PT Sans Narrow", "pt_sans_narrowregular", sans-serif;
+	font-weight: normal;
+	text-align: right;
+	color: #ffffff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .35);
+	line-height: 100%;
+}
+#sign-in > .container-fluid #sign-in-form h3 {
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+#sign-in > .container-fluid #sign-in-form h3 > span {
+	background: rgba(216, 37, 30, .85);
+	padding: 0 20px 5px;
+}
+#sign-in > .container-fluid #sign-in-form h1 {
+	font-size: 60px;
+}
+#sign-in > .container-fluid form {
+	background: rgba(255, 255, 255, .15);
+	border: 1px solid rgba(255, 255, 255, .05);
+	border-radius: 4px;
+	padding: 20px;
+}
+#sign-in > .container-fluid form label {
+	font-family: "PT Sans Caption", "pt_sans_captionregular", Verdana, sans-serif;
+	font-size: 15px;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+#sign-in > .container-fluid form input {
+	background: rgba(252, 252, 252, .65);
+	border: none;
+	border-radius: 2px;
+	display: block;
+	width: 90%;
+	font-size: 15px;
+	padding: 5px 6px 6px 10px;
+}
+#sign-in > .container-fluid form .btn {
+	background: #d8251e;
+	border: none;
+	border-radius: 2px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35), 0 1px 2px rgba(0, 0, 0, .15);
+	font-family: "PT Sans", "pt_sansregular", sans-serif;
+	color: #ffffff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .35);
+	text-transform: uppercase;
+	padding: 4px 40px;
+	margin-right: 10px;
+}
+#sign-in > .container-fluid form span,
+#sign-in > .container-fluid form span > a {
+	color: #ffffff;
+	font-style: italic;
+}
+#sign-in > .container-fluid form span {
+	display: block;
+	margin-top: 20px;
+}
+#sign-in > .container-fluid form span > a {
+	font-weight: bold;
+}
+#sign-in > .container-fluid form span > a:hover {
+	text-decoration: none;
+	color: #d8251e;
+}
+#sign-in footer > h6 {
+	font-family: "PT Sans Caption", "pt_sans_captionregular", sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #ffffff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .85);
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 0;
+}
+#sign-in footer > h6#site-links {
+	padding-bottom: 45px;
+}
+#sign-in footer > h6#site-links,
+#sign-in footer > h6#site-links > a {
+	font-size: 12px;
+	font-family: "PT Sans", "pt_sansregular", sans-serif;
+	color: #666666;
+	/*opacity: .15;*/
+	margin: 0 10px;
+}
+#sign-in footer > h6#site-links > a:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+/* BUILT-IN COMPONENTS */
+.caret {
+	border-top: 4px solid #ffffff;
+}
+li.dropdown {
+	list-style: none;
+}
+input {
+	height: auto !important;
+	font-family: "PT Sans", "pt_sansregular", sans-serif;
+}
+textarea {
+	resize: none;
+}
+.form-horizontal .control-group {
+	margin-bottom: 15px;
+}
+.form-horizontal .control-label {
+	text-align: left;
+	width: 120px;
+	font-size: 13px;
+}
+.form-horizontal .controls {
+	margin-left: 130px;
+}
+.form-horizontal .controls > * {
+	width: 100%;
+	border-radius: 0;
+	font-size: 13px;
+}
+.form-horizontal .controls > .radio {
+	display: inline-block;
+	width: 40%;
+}
+.form-horizontal .controls > select {
+	width: auto;
+}
+
+/* DIKBUD MAIN LAYOUT */
+html, .main-layout, .main-layout > .container-fluid,
+.container-fluid > .row-fluid, .container-fluid > .row-fluid > .span24,
+.container-fluid > .row-fluid > .span24 > .span7,
+.container-fluid > .row-fluid > .span24 > .span17 {
+	height: 100%;
+}
+.stripe-accent {
+	height: 5px;
+	background: -moz-linear-gradient(left,
+						#d8251e 0%, #d8251e 20%,
+						#ff5400 20%, #ff5400 40%,
+						#ffc600 40%, #ffc600 60%,
+						#2ca05a 60%, #2ca05a 80%,
+						#0478af 80%, #0478af 100%);
+	background: -ms-linear-gradient(left,
+						#d8251e 0%, #d8251e 20%,
+						#ff5400 20%, #ff5400 40%,
+						#ffc600 40%, #ffc600 60%,
+						#2ca05a 60%, #2ca05a 80%,
+						#0478af 80%, #0478af 100%);
+	background: -o-linear-gradient(left,
+						#d8251e 0%, #d8251e 20%,
+						#ff5400 20%, #ff5400 40%,
+						#ffc600 40%, #ffc600 60%,
+						#2ca05a 60%, #2ca05a 80%,
+						#0478af 80%, #0478af 100%);
+	background: -webkit-linear-gradient(left,
+						#d8251e 0%, #d8251e 20%,
+						#ff5400 20%, #ff5400 40%,
+						#ffc600 40%, #ffc600 60%,
+						#2ca05a 60%, #2ca05a 80%,
+						#0478af 80%, #0478af 100%);
+	background: linear-gradient(left,
+						#d8251e 0%, #d8251e 20%,
+						#ff5400 20%, #ff5400 40%,
+						#ffc600 40%, #ffc600 60%,
+						#2ca05a 60%, #2ca05a 80%,
+						#0478af 80%, #0478af 100%);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .55);
+}
+.sidebar {
+	background: #202020;
+	background: url("../img/sidebar-background.jpg") no-repeat;
+	background-size: 100%;
+	color: #ffffff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .55);
+	position: relative;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, .25);
+}
+.sidebar > header {
+	background: rgba(0, 0, 0, .15);
+	font-family: "PT Sans Narrow", "pt_sans_narrowregular", sans-serif;
+	font-size: 36px;
+	line-height: 100%;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .15);
+	text-align: right;
+	margin-top: 20px;
+	padding: 12px 24px 18px 0;
+}
+.sidebar > ul.pull-right {
+	margin-top: 10px;
+	margin-right: 25px;
+}
+.sidebar > ul.pull-right a.dropdown-toggle {
+	color: #ffffff;
+	font-style: italic;
+}
+.sidebar > ul.pull-right a.dropdown-toggle:hover,
+.sidebar > ul.pull-right a.dropdown-toggle:focus {
+	text-decoration: none;
+	opacity: .55;
+}
+.sidebar > footer {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	background: #202020;
+}
+.sidebar > footer > h6 {
+	font-family: "PT Sans Caption", "pt_sans_captionregular", Verdana, sans-serif;
+	font-size: 9px;
+	padding: 10px 10px 15px;
+}
+.sidebar #logo-wrapper {
+	position: absolute;
+	bottom: 85px;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.sidebar .stripe-accent {
+	height: 3px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+.main-content {
+	overflow-y: auto;
+	padding-right: 20px;
+}
+.main-content > .row-fluid {
+	margin-bottom: 60px;
+}
+.main-content > header {
+	background: url("../img/header-background.png") repeat;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.main-content > header > span {
+	background: #ffffff;
+	padding: 20px;
+}
+.main-content > header > span > img {
+	margin-top: -15px;
+	position: relative;
+	top: 8px;
+}
+.main-content .span12 {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.main-content .span12 > p {
+	padding-left: 15px;
+	padding-right: 15px;	
+}
+.main-content .span12 > h4 {
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 14px;
+	text-align: center;
+}
+.main-content .span12 > h4 > span {
+	background: #d8251e;
+	color: #ffffff;
+	padding: 2px 20px 3px;
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .35);
+}
+.main-content .span12 > .form-horizontal {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.main-content .block-field > .control-label {
+	display: block;
+	width: 100%;
+}
+.main-content .block-field > .controls {
+	margin-left: 0;
+}

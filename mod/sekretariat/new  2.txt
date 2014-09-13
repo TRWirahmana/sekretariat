@@ -1,0 +1,28 @@
+/*   if($act=="new"){
+    ?>
+      <SCRIPT language="JavaScript">
+      alert('Insert Succes!');
+      </SCRIPT> <?php
+	  header("Location: index.php?_mod=sekretariat&task=admin_surat&act=new");
+	 }else{?>
+	   <SCRIPT language="JavaScript">
+      alert('Update Succes!');
+      </SCRIPT> <?php
+	  header("Location: index.php?_mod=sekretariat&task=admin_surat&act=new");
+	 }
+   }else{
+       if($act=="new"){
+    ?>
+     <SCRIPT language="JavaScript">
+      alert('Insert Failed!');
+      </SCRIPT> 
+	  <?php
+	  header("Location: index.php?_mod=sekretariat&task=admin_surat&act=new");
+	  }else{?>
+	    <SCRIPT language="JavaScript">
+         alert('Update Failed!');
+        </SCRIPT> <?php
+	   header("Location: index.php?_mod=sekretariat&task=admin_surat&act=new");
+	  }
+    }
+*/
