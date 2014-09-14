@@ -127,19 +127,11 @@ $send_url = "index.php?_mod=$_mod&task=admin_surat";
             <div class="control-group">
                 <label class="control-label span7">Tanggal Terima</label>
                 <div class="controls span17">
-                    <input type="text" id="date" name="tgl_terima" value="" size="10"/>
+                    <input type="text" name="tgl_terima" value="" size="10"/>
                     <script language="JavaScript">
-                        $(function(){
-                            $('#date').datepicker({
-                                inline:true,
-                                showOtherMonths: true,
-                                altField: "#date",
-                                altFormat: "yy-mm-dd",
-                                dateFormat: "yy-mm-dd",
-                                onSelect: function(dateText){
-                                    $('#date').html(dateText);
-                                }
-                            });
+                        new tcal ({
+                            'formname': 'form',
+                            'controlname': 'tgl_terima'
                         });
                     </script>
                 </div>
@@ -206,24 +198,23 @@ $send_url = "index.php?_mod=$_mod&task=admin_surat";
 echo "<table border=0 width=100%>";
 	echo "<td><input class='btn btn-primary' type=button onClick=\"location.href='index.php?_mod=sekretariat&task=input_surat&act=new'\" value='Input Surat Baru'> </td><td align=right>";
 	if ($jml!=0){
-	//echo "Page ";
+	echo "Page ";
 	echo $pager->renderFullNav();	}
 	echo "</td></tr>";
 	echo "</table>";	
 	?>
-	<table class=table cellpadding=2 cellspacing=5 width=100%>
-	<tr  bgcolor='#757575' align=center height="3">
+<table class=table cellpadding=2 cellspacing=5 width=100%>
+    <tr  bgcolor='#757575' align=center height="3">
         <td class="table-menu" align="center"  valign="top" width="2%"><b>No</b></td>
         <td class="table-menu" align="center"  valign="top" width="5%"><b>No. Agenda KHO</b></td>
         <td class="table-menu" align="center"  valign="top" width="5%"><b>No. Agenda TU</b></td>
-        <td class="table-menu" align="center"  valign="top" width="5%"><b>No. Surat</b></td>
-        <td class="table-menu" align="center"  valign="top" width="15%"><b>Tgl Surat</b></td>
+        <td class="table-menu" align="center"  valign="top" width="10%"><b>No. Surat</b></td>
+        <td class="table-menu" align="center"  valign="top" width="10%"><b>Tgl Surat</b></td>
         <td class="table-menu" align="center"  valign="top" width="15%"><b>Pengirim</b></td>
-        <td class="table-menu" align="center"  valign="top" width="30%"><b>Hal</b></td>
+        <td class="table-menu" align="center"  valign="top" width="35%"><b>Hal</b></td>
         <td class="table-menu" align="center"  valign="top" width="10%"><b>Tgl Diterima</b></td>
-        <td class="table-menu" align="center"  valign="top" width="13%"><b>Aksi</b></td>
+        <td class="table-menu" align="center"  valign="top" width="10%"><b>Aksi</b></td>
     </tr>
-
 	<?php
 	
 	$no=$row_perpage*($page-1)+1;
@@ -248,17 +239,8 @@ echo "<table border=0 width=100%>";
 		if ($row[12]==0){$bg="#99CCFF";} else {$bg="#CCCCCC";}
 		if ($row[12]==0){$imgdoc="images/docblue.gif";} else {$imgdoc="images/doc1.gif";}
 		if ($row[12]==0){$imgedit="images/ico.edit.blue.gif";} else {$imgedit="images/ico_edit_grey.gif";}
-		echo "
-		<tr bgcolor=$bg><td align=\"center\" valign=\"top\">$no</td>
-		    <td align=\"center\" valign=\"top\"><p>$row[1]</p></td>
-		    <td align=\"center\" valign=\"top\"><p>$row[2]</p></td>
-		    <td align=\"left\" valign=\"top\"><p>$row[4]</p></td>
-		    <td valign=\"top\"><p>$tgl_srt</p></td>
-		    <td valign=\"top\"><p>$row[5]</p></td>
-		    <td valign=\"top\">$perihal</td>
-		    <td valign=\"top\"><p>$tgl_terima</p></td>";?>
-		    <td valign="top">
-            <a  align="center" href="index.php?_mod=sekretariat&task=detail&id=<?php echo $row[0];?>" title="detail surat"><img border=0 src="<?php echo $imgdoc;?>"></a>&nbsp;<a href="index.php?_mod=sekretariat&task=input_surat&act=edit&id=<?php echo $row[0];?>" title="edit"><img border=0 src="<?php echo $imgedit;?>"</a></td>
+		echo "<tr bgcolor=$bg><td align=\"center\" valign=\"top\">$no</td><td align=\"center\" valign=\"top\">$row[1]</td><td align=\"center\" valign=\"top\">$row[2]</td><td align=\"left\" valign=\"top\">$row[4]</td><td valign=\"top\">$tgl_srt</td><td valign=\"top\">$row[5]</td><td valign=\"top\">$perihal</td><td valign=\"top\">$tgl_terima</td>";?>
+		<td valign="top"><a href="index.php?_mod=sekretariat&task=detail&id=<?php echo $row[0];?>" title="detail surat"><img border=0 src="<?php echo $imgdoc;?>"></a>&nbsp;<a href="index.php?_mod=sekretariat&task=input_surat&act=edit&id=<?php echo $row[0];?>" title="edit"><img border=0 src="<?php echo $imgedit;?>"</a></td>
 	</tr>	
 		<?php
 		$no++;

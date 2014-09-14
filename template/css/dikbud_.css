@@ -405,11 +405,6 @@ legend {
 .table th {
   text-align: center;
 }
-
-.table-menu {
-    color: #ffffff;
-}
-
 .well {
   background: #2980B9;
   color: #ffffff;
@@ -432,7 +427,7 @@ html, .main-layout, .admin,
   position: relative;
   text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
   overflow: auto;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 .sidebar > header {
   position: relative;
@@ -645,7 +640,7 @@ html, .main-layout, .admin,
   text-transform: uppercase;
   font-size: 16px;
   /*color: rgba(255, 255, 255, .35);*/
-  color: #2980b9;
+  color: #FF7200;
 }
 .sidebar #user-menu > li > a > span[class *= rulycon],
 .sidebar ul.welcome-message > li > a > span[class *= rulycon],
@@ -953,7 +948,6 @@ table.dataTable td.dataTables_empty {
 .dataTables_paginate > a {
   color: #ffffff !important;
 }
-
 .user-menu-active {
   background: rgba(0, 0, 0, .15);
   color: #ffffff;
@@ -1292,19 +1286,6 @@ table.dataTable td.dataTables_empty {
   #user-header #content-title span[class*="rulycon"] {
     display: none;
   }
-}
-
-.page-btn{
-    border: none;
-    text-shadow: none;
-    color: #ffffff;
-    border-radius: 0;
-    font-family: "PT Sans Narrow", "pt_sans_narrowregular", sans-serif;
-    font-size: 13px;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    margin-right: -3px;
-    margin-left: -3px;
 }
 
 

@@ -89,12 +89,12 @@ class PS_Pagination {
 	 * @param string $tag Text string to be displayed as the link. Defaults to 'First'
 	 * @return string
 	 */
-	function renderFirst($tag='Awal') {
+	function renderFirst($tag='First') {
 		if($this->page == 1) {
-			return '<a class="page-btn btn-primary" style="pointer-events: none;cursor: default;" href="'.$this->php_self.'&page='.$this->max_pages.'">'.$tag.'</a>';
+			return $tag;
 		}
 		else {
-			return '<a class="page-btn btn-primary" href="'.$this->php_self.'&page=1">'.$tag.'</a>';
+			return '<a href="'.$this->php_self.'&page=1">'.$tag.'</a>';
 		}
 	}
 	
@@ -105,12 +105,12 @@ class PS_Pagination {
 	 * @param string $tag Text string to be displayed as the link. Defaults to 'Last'
 	 * @return string
 	 */
-	function renderLast($tag='Akhir') {
+	function renderLast($tag='Last') {
 		if($this->page == $this->max_pages) {
-			return '<a class="page-btn btn-primary" style="pointer-events: none;cursor: default;" href="'.$this->php_self.'&page='.$this->max_pages.'">'.$tag.'</a>';
+			return $tag;
 		}
 		else {
-			return '<a class="page-btn btn-primary" href="'.$this->php_self.'&page='.$this->max_pages.'">'.$tag.'</a>';
+			return '<a href="'.$this->php_self.'&page='.$this->max_pages.'">'.$tag.'</a>';
 		}
 	}
 	
@@ -123,10 +123,10 @@ class PS_Pagination {
 	 */
 	function renderNext($tag=' &gt;&gt;') {
 		if($this->page < $this->max_pages) {
-			return '<a class="page-btn btn-primary" href="'.$this->php_self.'&page='.($this->page+1).'">'.$tag.'</a>';
+			return '<a href="'.$this->php_self.'&page='.($this->page+1).'">'.$tag.'</a>';
 		}
 		else {
-			return '<a class="page-btn btn-primary" style="pointer-events: none;cursor: default;" href="'.$this->php_self.'&page='.$this->max_pages.'">'.$tag.'</a>';
+			return $tag;
 		}
 	}
 	
@@ -139,10 +139,10 @@ class PS_Pagination {
 	 */
 	function renderPrev($tag='&lt;&lt;') {
 		if($this->page > 1) {
-			return '<a class="page-btn btn-primary" href="'.$this->php_self.'&page='.($this->page-1).'">'.$tag.'</a>';
+			return '<a href="'.$this->php_self.'&page='.($this->page-1).'">'.$tag.'</a>';
 		}
 		else {
-			return '<a class="page-btn btn-primary" style="pointer-events: none;cursor: default;" href="'.$this->php_self.'&page='.$this->max_pages.'">'.$tag.'</a>';
+			return $tag;
 		}
 	}
 	
@@ -171,10 +171,10 @@ class PS_Pagination {
 		
 		for( $i=$start ; $i<=$end ; $i++) {
 			if($i == $this->page) {
-				$links .= ' <b class="page-btn" style="pointer-events: none;cursor: default;color:#0C33CF;background-image:linear-gradient(to bottom, #e6e6e6, #A9A9AA)">'.$i.'</b> ';
+				$links .= " <font color=\"red\">$i</font> ";
 			}
 			else {
-				$links .= ' <a class="page-btn btn-primary" href="'.$this->php_self.'&page='.$i.'">'.$i.'</a> ';
+				$links .= ' <a href="'.$this->php_self.'&page='.$i.'">'.$i.'</a> ';
 			}
 		}
 		
