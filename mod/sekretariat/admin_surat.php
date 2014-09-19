@@ -136,6 +136,8 @@ $send_url = "index.php?_mod=$_mod&task=admin_surat";
                                 altField: "#date",
                                 altFormat: "yy-mm-dd",
                                 dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
                                 onSelect: function(dateText){
                                     $('#date').html(dateText);
                                 }

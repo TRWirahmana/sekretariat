@@ -645,7 +645,7 @@ html, .main-layout, .admin,
   text-transform: uppercase;
   font-size: 16px;
   /*color: rgba(255, 255, 255, .35);*/
-  color: #2980b9;
+  color: #FF7200;
 }
 .sidebar #user-menu > li > a > span[class *= rulycon],
 .sidebar ul.welcome-message > li > a > span[class *= rulycon],
@@ -1305,6 +1305,15 @@ table.dataTable td.dataTables_empty {
     padding: 4px 10px;
     margin-right: -3px;
     margin-left: -3px;
+}
+
+
+.control-label{
+    font-weight: bold !important;
+}
+
+.form-center{
+    margin-left: 20%;
 }
 
 

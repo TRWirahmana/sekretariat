@@ -6,7 +6,7 @@
 	});
 </script>
 
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="template/sekretariat/style.css">
 <script language="JavaScript" src="inc/Calendar/calendar_db.js"></script>
 	<link rel="stylesheet" href="inc/Calendar/calendar.css">
 <?php	
@@ -140,66 +140,211 @@ $act=$_REQUEST["act"];
 
 $tahun=date("Y");
  $save_url = "index.php?_mod=$_mod&task=simpan";
- echo "Input Surat Masuk >> </br></br><br>";
+// echo "Input Surat Masuk >> </br></br><br>";
    $bulan=date("m");
 ?>
-<table border=0 width="100%" style="border:1px solid #cccccc"><tr><td>
 <form action="<?php echo $save_url;?>" method="post" name="form" enctype="multipart/form-data">
-<table>
-    
-	<tr><td width="150px">Nomor Surat Masuk</td><td><input type="text" name="no_surat" value="<?php echo $no_surat;?>" size="35"/></td></tr>
-	<tr><td width="150px">Tanggal Surat</td><td><input type="text" name="tgl_surat" value="<?php echo $tgl_surat;?>" size="10"/><script language="JavaScript">
-	new tcal ({
-		'formname': 'form',
-		'controlname': 'tgl_surat'
-	});
-	</script></td></tr>
-	<tr><td width="150px">No. Agenda Menteri</td><td><input type="text" name="agenda_menteri" value="<?php echo $agenda_menteri;?>" size="35"/></td></tr>
-	<tr><td width="150px">Disposisi Menteri</td><td><input type="text" name="disp_menteri" value="<?php echo $disp_menteri;?>" size="35"/></td></tr>
-	<tr><td width="150px">No. Agenda Sesjen</td><td><input type="text" name="agenda_sesjen" value="<?php echo $agenda_sesjen;?>" size="35"/></td></tr>
-	<tr><td width="150px">Disposisi Sesjen</td><td><input type="text" name="disp_sesjen" value="<?php echo $disp_sesjen;?>" size="35"/></td></tr>
-	<tr><td width="150px">Pengirim</td><td><input type="text" name="pengirim" value="<?php echo $pengirim;?>" size="35"/></td></tr>
-	<tr><td width="150px" valign="top">Perihal</td><td><textarea rows=4 cols=30 name="perihal"><?php echo $perihal;?></textarea></td></tr>
-	<tr><td width="150px">File (PDF)</td><td><input type="hidden" name="MAX_FILE_SIZE" value="200000000"><input name="fileupload" type="file" id="fileupload"></td></tr>
-	<tr><td width="150px">Tanggal Diterima</td><td><input type="text" name="tgl_terima" value="<?php echo $tgl_terima;?>" size="10"/><script language="JavaScript">
-	new tcal ({
-		'formname': 'form',
-		'controlname': 'tgl_terima'
-	});
-	</script></td></tr>
-	<tr><td width="150px" valign="top">Diteruskan Ke</td><td><?php
-		 $sql_bag="select * from kode_bagian";
-	     $query_bag=mysql_query($sql_bag);
-	     while ($row_bag=mysql_fetch_array($query_bag)) {
-	       ?><INPUT TYPE=CHECKBOX NAME="diteruskan_2[]" value="<?php echo $row_bag[0];?>" <?php if (($act=="edit")&&(dit_check($id,$row_bag[0])==true)){ echo "checked";}?>><?php echo $row_bag[1];?><BR><?php
-	     }?>
-	<!--<input type="text" name="diteruskan_2" value="<?php //echo $diteruskan_2;?>" size="35"/>--></td></tr>
-	<tr><td width="150px" valign="top">Disposisi</td><td><?php
-		 $sql_dis="select * from disposisi where view=1";
-	     $query_dis=mysql_query($sql_dis);
-	     while ($row_dis=mysql_fetch_array($query_dis)) {
-	        ?><INPUT TYPE=CHECKBOX NAME="disposisi[]" value="<?php echo $row_dis[0];?>" <?php if (($act=="edit")&&(disp_check($id,$row_dis[0])==true)){ echo "checked";}?>><?php echo $row_dis[1];?><BR><?php
-	     }?>
-	<tr><td width="150px" valign="top">Keterangan</td><td><textarea rows=4 cols=30 name="keterangan"><?php echo $keterangan;?></textarea></td></tr>
-	<tr><td width="150px" valign="top">Status</td><td><INPUT TYPE=CHECKBOX NAME="status" value="1" <?php if (($act=="edit") && ($row[12]=="1")){ echo "checked";}?>>Selesai</td></tr>
-	<tr><td width="150px">Tanggal Selesai</td><td><input type="text" name="tgl_selesai" value="<?php echo $tgl_selesai;?>" size="10"/><script language="JavaScript">
-	new tcal ({
-		'formname': 'form',
-		'controlname': 'tgl_selesai'
-	});
-	</script></td></tr>	
-	<tr><td><input class="button3d" type="reset" name="reset" value="Cancel"/></td>
-	<td><input class="button3d" type="submit" name="submit" value="Save"/>&nbsp&nbsp
-	<input class="button3d" type="submit" name="submit" value="Save & Print"/>
-				</td></tr>
-				<?php if ($act=="edit"){ ?>
-				<input type="hidden" name="id" value="<?php echo $id;?>"/>
-				<?php 
-				}
-				?>
-				<input type="hidden" name="act" value="<?php echo $act;?>"/>
-			</table>
-				
-			</form>
-			</td></tr>
-			</table>
+<div class="span24"  style="margin-left: 0 !important;">
+    <div class="nav nav-tabs">
+        <h4>Input Surat Masuk</h4>
+    </div>
+<!--    <strong>Silahkan lengkapi formulir berikut untuk melakukan pendaftaran. Isian dengan tanda <span class="required"></span> wajib diisi.</strong>-->
+</div>
+<div class="row-fluid">
+    <!--            left content-->
+    <div class="span12">
+<!--        <div class="nav nav-tabs">-->
+<!--            <h4>Akun Pendaftar</h4>-->
+<!--        </div>-->
+
+        <div class="control-group">
+            <label class="control-label span7">Nomor Surat Masuk</label>
+            <div class="controls">
+                <input type="text" name="no_surat" id="no_surat" value="<?php echo $no_surat;?>" size="35" class="text-input"/>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="control-group">
+            <label class="control-label span7">Tanggal Surat</label>
+            <div class="controls">
+                <input type="text" name="tgl_surat" id="tanggal_surat" value="<?php echo $tgl_surat;?>" size="10"/>
+                <script language="JavaScript">
+                    $(function(){
+                        $('#tanggal_surat').datepicker({
+                            inline:true,
+                            showOtherMonths: true,
+                            altField: "#tanggal_surat",
+                            altFormat: "yy-mm-dd",
+                            dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                            onSelect: function(dateText){
+                                $('#tanggal_surat').html(dateText);
+                            }
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label span7">No. Agenda Menteri</label>
+            <div class="controls">
+                <input type="text" name="agenda_menteri" value="<?php echo $agenda_menteri;?>" size="35"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label span7">Disposisi Menteri</label>
+            <div class="controls">
+                <input type="text" name="disp_menteri" value="<?php echo $disp_menteri;?>" size="35"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label span7">No. Agenda Sesjen</label>
+            <div class="controls">
+                <input type="text" name="agenda_sesjen" value="<?php echo $agenda_sesjen;?>" size="35"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label span7">Disposisi Sesjen</label>
+            <div class="controls">
+                <input type="text" name="disp_sesjen" value="<?php echo $disp_sesjen;?>" size="35"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label span7">Pengirim</label>
+            <div class="controls">
+                <input type="text" name="pengirim" value="<?php echo $pengirim;?>" size="35"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label span7">Perihal</label>
+            <div class="controls">
+                <textarea rows=4 cols=30 name="perihal"><?php echo $perihal;?></textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label span7">File (PDF)</label>
+            <div class="controls">
+                <input type="hidden" name="MAX_FILE_SIZE" value="200000000"><input name="fileupload" type="file" id="fileupload">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label span7">Tanggal Diterima</label>
+            <div class="controls">
+                <input type="text" name="tgl_terima" id="tanggal_terima" value="<?php echo $tgl_terima;?>" size="10"/>
+                <script language="JavaScript">
+                    $(function(){
+                        $('#tanggal_terima').datepicker({
+                            inline:true,
+                            showOtherMonths: true,
+                            altField: "#tanggal_terima",
+                            altFormat: "yy-mm-dd",
+                            dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                            onSelect: function(dateText){
+                                $('#tanggal_terima').html(dateText);
+                            }
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+
+    </div>
+    <!--            right content-->
+    <div class="span12">
+<!--        <div class="nav nav-tabs">-->
+<!--            <h4>Data Pendaftar</h4>-->
+<!--        </div>-->
+
+
+
+        <div class="control-group">
+            <label class="control-label span7">Diteruskan Ke</label>
+            <div class="controls span17">
+                <?php
+                $sql_bag="select * from kode_bagian";
+                $query_bag=mysql_query($sql_bag);
+                while ($row_bag=mysql_fetch_array($query_bag)) {
+                    ?><INPUT TYPE=CHECKBOX NAME="diteruskan_2[]" value="<?php echo $row_bag[0];?>" <?php if (($act=="edit")&&(dit_check($id,$row_bag[0])==true)){ echo "checked";}?>><?php echo $row_bag[1];?><BR><?php
+                }?>
+            </div>
+        </div>
+<div class="clearfix"></div>
+        <div class="control-group" style="margin-top: 20px;">
+            <label class="control-label span7">Disposisi</label>
+            <div class="controls span17">
+                <?php
+                $sql_dis="select * from disposisi where view=1";
+                $query_dis=mysql_query($sql_dis);
+                while ($row_dis=mysql_fetch_array($query_dis)) {
+                    ?><INPUT TYPE=CHECKBOX NAME="disposisi[]" value="<?php echo $row_dis[0];?>" <?php if (($act=="edit")&&(disp_check($id,$row_dis[0])==true)){ echo "checked";}?>><?php echo $row_dis[1];?><BR><?php
+                }?>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="control-group">
+            <label class="control-label span7">Keterangan</label>
+            <div class="controls">
+                <textarea rows=4 cols=30 name="keterangan"><?php echo $keterangan;?></textarea>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label span7">Status</label>
+            <div class="controls">
+                <INPUT TYPE=CHECKBOX NAME="status" value="1" <?php if (($act=="edit") && ($row[12]=="1")){ echo "checked";}?>>Selesai
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="control-group">
+            <label class="control-label span7">Tanggal Selesai</label>
+            <div class="controls">
+                <input type="text" name="tgl_selesai" id="tanggal_selesai" value="<?php echo $tgl_selesai;?>" size="10"/>
+                <script language="JavaScript">
+                    $(function(){
+                        $('#tanggal_selesai').datepicker({
+                            inline:true,
+                            showOtherMonths: true,
+                            altField: "#tanggal_selesai",
+                            altFormat: "yy-mm-dd",
+                            dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                            onSelect: function(dateText){
+                                $('#tanggal_selesai').html(dateText);
+                            }
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row-fluid" style="margin-top: 24px; margin-bottom: 48px;">
+    <div class="span10 offset7">
+        <button class="btn btn-primary" type="reset" name="reset">Cancel</button>
+        <button class="btn btn-primary" type="submit" name="submit">Save</button>
+        <button class="btn btn-primary" type="submit" name="submit">Save & Print</button>
+        <?php if ($act=="edit"){ ?>
+            <input type="hidden" name="id" value="<?php echo $id;?>"/>
+        <?php
+        }
+        ?>
+        <input type="hidden" name="act" value="<?php echo $act;?>"/>
+
+    </div>
+</div>
+
+</form>

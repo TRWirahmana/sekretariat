@@ -48,7 +48,7 @@ function report_block(){
 			$rep_content  = "<li><a href=${sekretariat_url}&task=report&act=new><span class=rulycon-drawer-3></span>Surat Masuk</a></li>";
 			$rep_content  .= "<li><a href=${sekretariat_url}&task=report_agenda&act=new><span class=rulycon-drawer-3></span>Jadwal</a></li>";
 			//$rep_content  .= "<li><a href=${sekretariat_url}&task=report_dokumen&act=new>Dokumen</a></li>";
-			$rep_content  .= "<li><a href=${logout_url}&task=logout class=btn id='btn-signin' type='button'><i>Logout</i></a></li>";
+			$rep_content  .= "<li><a href=${logout_url}&task=logout class=btn id='btn-signin' type='button'><i style='color: #FF7200'>Logout</i></a></li>";
 			
 			//$rep_content  .= "<li><a href=${sekretariat_url}&task=login><i>Login Admin</i></a></li>";	
 			
@@ -83,7 +83,7 @@ function admin_block(){
 			//$adm_content  .= "<li><a href=${peraturan_url}&task=admin_skb&act=new>Daftar Kesepakatan Bersama</a></li>";
 			//$adm_content  .= "<li><a href=${peraturan_url}&task=report_detail&act=new>Report Detail Peraturan</a></li>";	
 			//$adm_content  .= "<li><a href=${peraturan_url}&task=logout>Logout</a></li>";	
-	        $adm_content  .= "<li><a href=${logout_url}&task=logout class=btn id='btn-signin' type='button'><i>Logout</i></a></li>";
+	        $adm_content  .= "<li><a href=${logout_url}&task=logout class=btn id='btn-signin' type='button'><i style='color: #FF7200'>Logout</i></a></li>";
 			 block_create('Menu',$adm_content);
                     }
 

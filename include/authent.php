@@ -58,36 +58,41 @@ $db=mysql_select_db("sekretariat");
         <div class="loginpanel">
             <div class="loginpanelinner">
                 <div class="logo animate3 bounceIn">
-                    <!--            <img class="inputwrapper animate0 bounceIn" src="{{asset('assets/images/logo-only.png')}}" alt=""/>-->
-                    <h4>
-                        <span>Biro Hukum dan Organisasi</span><br>
-                        <span>Kementerian Pendidikan dan Kebudayaan</span><br>
-                        <span>Republik Indonesia</span>
-                    </h4>
+                                <img class="inputwrapper animate0 bounceIn" src="../sekretariat/template/images/logo-only.png" alt=""/>
+<!--                    <h4>-->
+<!--                        <span>Biro Hukum dan Organisasi</span><br>-->
+<!--                        <span>Kementerian Pendidikan dan Kebudayaan</span><br>-->
+<!--                        <span>Republik Indonesia</span>-->
+<!--                    </h4>-->
                 </div>
                 <!--        {{-- form login--}}-->
                 <!--        {{ Form::open(array('action' => 'LoginController@signin_admin', 'method' => 'post', 'id'=>'user-sign-in-form',-->
                 <!--        'class' =>'front-form', 'autocomplete' => 'off')) }}-->
-
+                <div class="nav nav-tabs">
+<!--                    <h3> Daftar Surat Masuk</h3>-->
+                </div>
                 <form method=post action="index.php" class="front-from" id="user-sign-in-form" >
                     <input type=hidden name=isSubmit value=1>
                     <div class="inputwrapper animate1 bounceIn">
-                        <input type=text name=userid class=text_input size=12 value="" >
+                        <input type=text name=userid class=text_input size=12 value="" placeholder="Masukkan username disini...">
                     </div>
                     <div class="inputwrapper animate2 bounceIn">
-                        <input type=password name=password size=12 class=text_input value="" >
+                        <input type=password name=password size=12 class=text_input value="" placeholder="Masukkan password disini...">
                     </div>
                     <div class="inputwrapper animate3 bounceIn">
 <!--                        <button class="btn" id="btn-signin" type="submit" name=submit>Login</button>-->
                         <input type=submit name=submit class=btn id="btn-signin" value="Login">
+                        <p style="color:#2980b9; text-align: center; font-size: 12px;">&copy; 2014 Biro Hukum dan Organisasi</p>
                     </div>
                 </form>
 
             </div><!--loginpanelinner-->
+
         </div><!--loginpanel-->
 
+
         <div class="loginfooter">
-            <p>&copy; 2014 Biro Hukum dan Organisasi</p>
+<!--            <p style="color:#2980b9;">&copy; 2014 Biro Hukum dan Organisasi</p>-->
         </div>
 
         </body>

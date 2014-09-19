@@ -92,7 +92,6 @@ echo "<table border=0 width=100%>";?>
 	$no=$row_perpage*($page-1)+1;
 	$hari_awal="";
 	while ($row=mysql_fetch_array($rs)){
-	    <?php
 	
 	$no=$row_perpage*($page-1)+1;
 	 $hari = array( "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu","Minggu");
