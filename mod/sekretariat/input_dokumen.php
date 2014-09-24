@@ -97,11 +97,125 @@ $act=$_REQUEST["act"];
 
 $tahun=date("Y");
  $save_url = "index.php?_mod=$_mod&task=simpan_dok";
- echo "Input Dokumen >> </br></br><br>";
+ //echo "Input Dokumen >> </br></br><br>";
 ?>
-<table border=0 width="100%" style="border:1px solid #cccccc"><tr><td>
+<!--table border=0 width="100%" style="border:1px solid #cccccc"><tr><td-->
 <form action="<?php echo $save_url;?>" method="post" name="form" >
-<table>
+
+    <div class="span24"  style="margin-left: 0 !important;">
+        <div class="nav nav-tabs">
+            <h4>Input Dokumen</h4>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+
+        <!--left content-->
+        <div class="span12">
+
+            <div class="control-group">
+                <label class="control-label span7">Tanggal Masuk</label>
+                <div class="controls">
+                    <input type="text" name="tgl_masuk" value="<?php echo $tgl_masuk;?>" size="10"/>
+                    <script language="JavaScript">
+                        new tcal ({
+                            'formname': 'form',
+                            'controlname': 'tgl_masuk'
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label span7">Nama Dokumen</label>
+                <div class="controls">
+                    <textarea rows=4 cols=30 name="nama_dokumen"><?php echo $nama_dokumen;?></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label span7">Yang Menyerahkan</label>
+                <div class="controls">
+                    <input type="text" name="pembawa" value="<?php echo $pembawa;?>" size="35"/>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label span7">Keperluan</label>
+                <div class="controls">
+                    <select name="keperluan">
+                        <option value="1" <?php if ($keperluan=="1") echo "selected";?>>Tanda Tangan Karo</option>
+                        <option value="2" <?php if ($keperluan=="2") echo "selected";?>>Paraf Karo</option>
+                        <option value="3" <?php if ($keperluan=="3") echo "selected";?>>Tanda Tangan & Paraf Karo</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+        <!--right content-->
+        <div clas="span12">
+            <div class="control-group">
+                <label class="control-label span7">Tujuan Dokumen</label>
+                <div class="controls">
+                    <input type="text" name="tujuan" value="<?php echo $tujuan;?>" size="35"/>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label span7">Tanggal Keluar (dari Karo)</label>
+                <div class="controls">
+                    <input type="text" name="tgl_keluar" value="<?php echo $tgl_keluar;?>" size="10"/>
+                    <script language="JavaScript">
+                        new tcal ({
+                            'formname': 'form',
+                            'controlname': 'tgl_keluar'
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label span7">Penerima</label>
+                <div class="controls">
+                    <input type="text" name="penerima" value="<?php echo $penerima;?>" size="35"/>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label span7">Keterangan</label>
+                <div class="controls">
+                    <textarea rows=4 cols=30 name="keterangan"><?php echo $keterangan;?></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label span7">Status</label>
+                <div class="controls">
+                    <INPUT TYPE=CHECKBOX NAME="status" value="1" <?php if (($act=="edit") && ($row[9]=="1")){ echo "checked";}?>>Selesai
+                </div>
+            </div>
+        </div>
+
+     </div>
+
+    <div class="row-fluid" style="margin-top: 24px; margin-bottom: 48px;">
+        <div class="span10 offset9">
+            <button class="btn btn-primary" type="reset" name="reset">Cancel</button>
+            <button class="btn btn-primary" type="submit" name="submit">Save</button>
+            <button class="btn btn-primary" type="submit" name="submit">Save & Print</button>
+            <?php if ($act=="edit"){ ?>
+                <input type="hidden" name="id" value="<?php echo $id;?>"/>
+            <?php
+            }
+            ?>
+            <input type="hidden" name="act" value="<?php echo $act;?>"/>
+
+        </div>
+    </div>
+
+</form>
+<!--table>
 <tr><td width="220px">Tanggal Masuk</td><td><input type="text" name="tgl_masuk" value="<?php echo $tgl_masuk;?>" size="10"/><script language="JavaScript">
 	new tcal ({
 		'formname': 'form',
@@ -144,4 +258,4 @@ $tahun=date("Y");
 				
 			</form>
 			</td></tr>
-			</table>
+			</table-->

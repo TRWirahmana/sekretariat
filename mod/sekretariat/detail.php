@@ -96,6 +96,7 @@ $tahun=date("Y");
 ?>
 <div class="content-non-title">
     <form action="" method="post" name="form" >
+
         <div class="row-fluid">
             <div class="span24">
                 <fieldset>
@@ -150,7 +151,7 @@ $tahun=date("Y");
                     <div class="control-group form-center">
                         <label class="control-label span4">Pengirim</label>
                         <div class="controls span17">
-                            <input type="text" class="span17" name="pengirim" value="<?php echo $pengirim;?>" size="41" READONLY/>
+                            <input type="text" class="span15" name="pengirim" value="<?php echo $pengirim;?>" size="41" READONLY/>
                         </div>
                     </div>
                     <div class="clearfix"></div>
