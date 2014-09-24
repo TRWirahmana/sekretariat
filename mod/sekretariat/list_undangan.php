@@ -87,13 +87,23 @@ echo "<table border=0 width=100%>";?>
 <tr><td></td>
 <?php	echo "<td align=right>";
 	if ($jml!=0){
-	echo "Page ";
+	//echo "Page ";
 	echo $pager->renderFullNav();	}
 	echo "</td></tr>";
 	echo "</table>";	
 	?>
- <table class=table cellpadding=2 cellspacing=1 bordercolor=#111111 width=100%>
-	<tr class=\"bodystyle\" bgcolor='#757575' align=center height="3"><td align="center" width="3"><b>No</b></td><td align="center" width="5"><b>Hari</b></td><td align="center" width="5"><b>Tanggal</b></td><td align="center" width="12%"><b>Waktu</b></td><td align="center" width="10%"><b>Tempat</b></td><td align="center" width="30%"><b>Acara</b></td><td align="center" width="10"><b>Komite</b></td><td align="center" width="10"><b>Disposisi</b></td><td align="center" width="10"><b>Ket</b></td></tr>
+ <table class=table cellpadding=2 cellspacing=1 width=100%>
+	<tr class=\"bodystyle\" bgcolor='#757575' align=center height="3">
+        <td class="table-menu" align="center" width="2%"><b>No</b></td>
+        <td class="table-menu" align="center" width="3%"><b>Hari</b></td>
+        <td class="table-menu" align="center" width="10%"><b>Tanggal</b></td>
+        <td class="table-menu" align="center" width="5%"><b>Waktu</b></td>
+        <td class="table-menu" align="center" width="10%"><b>Tempat</b></td>
+        <td class="table-menu" align="center" width="20%"><b>Acara</b></td>
+        <td class="table-menu" align="center" width="10%"><b>Komite</b></td>
+        <td class="table-menu" align="center" width="10%"><b>Disposisi</b></td>
+        <td class="table-menu" align="center" width="10%"><b>Ket</b></td>
+    </tr>
 	<?php
 	
 	$no=$row_perpage*($page-1)+1;
@@ -124,7 +134,17 @@ echo "<table border=0 width=100%>";?>
 		if ($no%2==0){$bg="#C8C8C8";} else {$bg="#CCCCCC";}
 		 if ($nama_hari!=$hari_awal){
 		    
-		    echo "<tr bgcolor=$bg><td align=\"center\" valign=\"top\">$no</td><td align=\"left\" valign=\"top\">$nama_hari</td><td align=\"center\" valign=\"top\">$tgl_text</td><td  valign=\"top\">$waktu</td><td valign=\"top\" >$row[8]</td><td valign=\"top\">$row[9]</td><td valign=\"top\">$row[10]</td><td valign=\"top\">$row[11]</td><td valign=\"top\">$row[12]</td></tr>";?>
+		    echo "
+		    <tr bgcolor=$bg>
+		    <td align=\"center\" valign=\"top\"><p>$no</p></td>
+		    <td align=\"left\" valign=\"top\"><p>$nama_hari</p></td>
+		    <td align=\"center\" valign=\"top\"><p>$tgl_text</p></td>
+		    <td  valign=\"top\"><p>$waktu</p></td>
+		    <td valign=\"top\" ><p>$row[8]</p></td>
+		    <td valign=\"top\">$row[9]</td>
+		    <td valign=\"top\"><p>$row[10]</p></td>
+		    <td valign=\"top\"><p>$row[11]</p></td>
+		    <td valign=\"top\">$row[12]</td></tr>";?>
 			
 	<?php  $hari_awal=$nama_hari;
 	       $no++;

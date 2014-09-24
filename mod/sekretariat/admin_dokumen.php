@@ -59,15 +59,26 @@ extract($_POST);
 echo "<table border=0 width=100%>";
 	echo "<td><input type=button onClick=\"location.href='index.php?_mod=sekretariat&task=input_dokumen&act=new'\" value='Tambah Dokumen'> </td><td align=right>";
 	if ($jml!=0){
-	echo "Page ";
+	//echo "Page ";
 	echo $pager->renderFullNav();	}
 	echo "</td></tr>";
 	echo "</table>";	
 	?>
- <table class=table cellpadding=2 cellspacing=1 bordercolor=#111111 width=100%>
-	<tr class=\"bodystyle\" bgcolor='#757575' align=center height="3"><td align="center" valign="top" width="3"><b>No</b></td><td align="center" valign="top" width="5"><b>Tanggal</b></td><td align="center" valign="top" width="40%"><b>Nama Dokumen</b></td><td align="center" valign="top" width="10"><b>Yang Menyerahkan</b></td><td align="center" valign="top" width="10"><b>Keperluan</b></td><td align="center" valign="top" width="20"><b>Tujuan Dokumen</b></td><td align="center" valign="top" width="10%"><b>Tanggal Keluar (dari Karo)</b></td><td align="center" valign="top" width="13%"><b>Penerima</b></td><td align="center" valign="top" width="13%"><b>Ket</b></td><td align="center" valign="top" width="40"><b>-</b></td></tr>
+ <table class=table cellpadding=2 cellspacing=1  width=100%>
+	<tr class=\"bodystyle\" bgcolor='#757575' align=center height="3">
+        <td class="table-menu" align="center" valign="top" width="2%"><b>No</b></td>
+        <td class="table-menu" align="center" valign="top" width="10%"><b>Tanggal</b></td>
+        <td class="table-menu" align="center" valign="top" width="20%"><b>Nama Dokumen</b></td>
+        <td class="table-menu" align="center" valign="top" width="10%"><b>Yang Menyerahkan</b></td>
+        <td class="table-menu" align="center" valign="top" width="10%"><b>Keperluan</b></td>
+        <td class="table-menu" align="center" valign="top" width="10%"><b>Tujuan Dokumen</b></td>
+        <td class="table-menu" align="center" valign="top" width="10%"><b>Tanggal Keluar (dari Karo)</b></td>
+        <td class="table-menu" align="center" valign="top" width="5%"><b>Penerima</b></td>
+        <td class="table-menu" align="center" valign="top" width="15%"><b>Ket</b></td>
+        <td class="table-menu" align="center" valign="top" width="13%"><b>Aksi</b></td>
+    </tr>
 	<?php
-	
+
 	$no=$row_perpage*($page-1)+1;
 	while ($row=mysql_fetch_array($rs)){
 	     $tgl_msk=date("d-M-Y", strtotime($row['tgl_masuk']));
@@ -91,9 +102,20 @@ echo "<table border=0 width=100%>";
 		if ($row[9]==0){$imgdel="images/delete_blue.gif";} else {$imgdel="images/deletegrey.gif";}
 		if ($row[9]==0){$imgedit="images/ico.edit.blue.gif";} else {$imgedit="images/ico_edit_grey.gif";}
 		
-		echo "<tr bgcolor=$bg><td align=\"center\"valign=\"top\">$no</td><td align=\"center\" valign=\"top\">$tgl_msk</td><td align=\"left\" valign=\"top\">$row[2]</td><td valign=\"top\">$row[3]</td><td valign=\"top\">$keperluan</td><td valign=\"top\">$row[5]</td><td valign=\"top\">$tgl_keluar</td><td valign=\"top\">$row[7]</td><td valign=\"top\">$row[8]</td>";?>
-		<td valign="top"><a href="index.php?_mod=sekretariat&task=input_dokumen&act=edit&id=<?php echo $row[0];?>"><img border=0 src="<?php echo $imgedit;?>"></a>&nbsp;&nbsp;<a href="index.php?_mod=sekretariat&task=delete_dokumen&id=<?php echo $row[0];?>" onclick="return confirm('Are you sure you want to delete <?php echo $row[1];?> ?')"><img border=0 src="<?php echo $imgdel;?>"></a></td>
-	</tr>	
+		echo "
+		<tr bgcolor=$bg>
+		    <td align=\"center\"valign=\"top\"><p>$no</p></td>
+		    <td align=\"center\" valign=\"top\"><p>$tgl_msk</p></td>
+		    <td align=\"left\" valign=\"top\">$row[2]</td>
+		    <td valign=\"top\"><p>$row[3]</p></td>
+		    <td valign=\"top\"><p>$keperluan</p></td>
+		    <td valign=\"top\"><p>$row[5]</p></td>
+		    <td valign=\"top\"><p>$tgl_keluar</p></td>
+		    <td valign=\"top\"><p>$row[7]</p></td>
+		    <td valign=\"top\"><p>$row[8]</p></td>";?>
+		    <td valign="top">
+                <a href="index.php?_mod=sekretariat&task=input_dokumen&act=edit&id=<?php echo $row[0];?>"><img border=0 src="<?php echo $imgedit;?>"></a>&nbsp;&nbsp;<a href="index.php?_mod=sekretariat&task=delete_dokumen&id=<?php echo $row[0];?>" onclick="return confirm('Are you sure you want to delete <?php echo $row[1];?> ?')"><img border=0 src="<?php echo $imgdel;?>"></a></td>
+	    </tr>
 		<?php
 		$no++;
 	}

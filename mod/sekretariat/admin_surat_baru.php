@@ -75,13 +75,23 @@ $send_url = "index.php?_mod=$_mod&task=admin_surat_baru";
 echo "<table border=0 width=100%>";
 	echo "<td><input type=button onClick=\"location.href='index.php?_mod=sekretariat&task=input_surat&act=new'\" value='Input Surat Baru'> </td><td align=right>";
 	if ($jml!=0){
-	echo "Page ";
+	//echo "Page ";
 	echo $pager->renderFullNav();	}
 	echo "</td></tr>";
 	echo "</table>";	
 	?>
-	<table class=table cellpadding=2 cellspacing=1 bordercolor=#111111 width=100%>
-	<tr class=\"bodystyle\" bgcolor='#757575' align=center height="3"><td align="center"  valign="top" width="3"><b>No</b></td><td align="center"  valign="top" width="5"><b>No. Agenda KHO</b></td><td align="center"  valign="top" width="5"><b>No. Agenda TU</b></td><td align="center"  valign="top" width="15%"><b>No. Surat</b></td><td align="center"  valign="top" width="10"><b>Tgl Surat</b></td><td align="center"  valign="top" width="10%"><b>Pengirim</b></td><td align="center"  valign="top" width="53%"><b>Hal</b></td><td align="center"  valign="top" width="10"><b>Tgl Diterima</b></td><td align="center"  valign="top" width="10"><b>-</b></td></tr>
+	<table class=table cellpadding=2 cellspacing=5 width=100%>
+	<tr class=\"bodystyle\" bgcolor='#757575' align=center height="3">
+        <td class="table-menu" align="center"  valign="top" width="2%"><b>No</b></td>
+        <td class="table-menu" align="center"  valign="top" width="5%"><b>No. Agenda KHO</b></td>
+        <td class="table-menu" align="center"  valign="top" width="5%"><b>No. Agenda TU</b></td>
+        <td class="table-menu" align="center"  valign="top" width="5%"><b>No. Surat</b></td>
+        <td class="table-menu" align="center"  valign="top" width="10%"><b>Tgl Surat</b></td>
+        <td class="table-menu" align="center"  valign="top" width="10%"><b>Pengirim</b></td>
+        <td class="table-menu" align="center"  valign="top" width="25%"><b>Hal</b></td>
+        <td class="table-menu"align="center"  valign="top" width="10%"><b>Tgl Diterima</b></td>
+        <td class="table-menu" align="center"  valign="top" width="10%"><b>Aksi</b></td>
+    </tr>
 
 	<?php
 	
@@ -105,7 +115,16 @@ echo "<table border=0 width=100%>";
 		if ($row[12]==0){$bg="#99CCFF";} else {$bg="#CCCCCC";}
 		if ($row[12]==0){$imgdoc="images/docblue.gif";} else {$imgdoc="images/doc1.gif";}
 		if ($row[12]==0){$imgedit="images/ico.edit.blue.gif";} else {$imgedit="images/ico_edit_grey.gif";}
-		echo "<tr bgcolor=$bg><td align=\"center\" valign=\"top\">$no</td><td align=\"center\" valign=\"top\">$row[1]</td><td align=\"center\" valign=\"top\">$row[2]</td><td align=\"left\" valign=\"top\">$row[4]</td><td valign=\"top\">$tgl_srt</td><td valign=\"top\">$row[5]</td><td valign=\"top\">$row[6]</td><td valign=\"top\">$tgl_terima</td>";?>
+		echo "
+		<tr bgcolor=$bg>
+		    <td align=\"center\" valign=\"top\"><p>$no</p></td>
+		    <td align=\"center\" valign=\"top\"><p>$row[1]</p></td>
+		    <td align=\"center\" valign=\"top\"><p>$row[2]</p></td>
+		    <td align=\"left\" valign=\"top\"><p>$row[4]</p></td>
+		    <td valign=\"top\"><p>$tgl_srt</p></td>
+		    <td valign=\"top\"><p>$row[5]</p></td>
+		    <td valign=\"top\"><p>$row[6]</p></td>
+		    <td valign=\"top\"><p>$tgl_terima</p></td>";?>
 		<td valign="top"><a href="index.php?_mod=sekretariat&task=detail&id=<?php echo $row[0];?>" title="detail surat"><img border=0 src="<?php echo $imgdoc;?>"></a>&nbsp;<a href="index.php?_mod=sekretariat&task=input_surat&act=edit&id=<?php echo $row[0];?>" title="edit"><img border=0 src="<?php echo $imgedit;?>"</a></td>
 	</tr>	
 		<?php

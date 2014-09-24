@@ -78,13 +78,25 @@ $send_url = "index.php?_mod=$_mod&task=admin_undangan";
 echo "<table border=0 width=100%>";
 	echo "<td><input type=button onClick=\"location.href='index.php?_mod=sekretariat&task=input_undangan&act=new'\" value='Input Undangan Baru'> </td><td align=right>";
 	if ($jml!=0){
-	echo "Page ";
+	//echo "Page ";
 	echo $pager->renderFullNav();	}
 	echo "</td></tr>";
 	echo "</table>";	
 	?>
-<table class=table cellpadding=2 cellspacing=1 bordercolor=#111111 width=100%>
-	<tr class=\"bodystyle\" bgcolor='#757575' align=center height="3"><td align="center"  valign="top" width="3"><b>No</b></td><td align="center"  valign="top" width="5"><b>No. Agenda</b></td><td align="center"  valign="top" width="5"><b>No. Undangan</b></td><td align="center"  valign="top" width="10%"><b>Tanggal Acara</b></td><td align="center"  valign="top" width="10%"><b>Waktu</b></td><td align="center"  valign="top" width="15%"><b>Tempat</b></td><td align="center"  valign="top"  width="53%"><b>Acara</b></td><td align="center" width="10%" valign="top"><b>Komite</b></td><td align="center"  valign="top" width="10%"><b>Disposisi</b></td><td align="center"  valign="top" width="53%"><b>Ket</b></td><td align="center"  valign="top" width="10"><b>-</b></td></tr>
+<table class=table cellpadding=2 cellspacing=1 width=100%>
+	<tr class=\"bodystyle\" bgcolor='#757575' align=center height="3">
+        <td class="table-menu" align="center"  valign="top" width="2%"><b>No</b></td>
+        <td class="table-menu" align="center"  valign="top" width="5%"><b>No. Agenda</b></td>
+        <td class="table-menu" align="center"  valign="top" width="5%"><b>No. Undangan</b></td>
+        <td class="table-menu" align="center"  valign="top" width="10%"><b>Tanggal Acara</b></td>
+        <td class="table-menu" align="center"  valign="top" width="5%"><b>Waktu</b></td>
+        <td class="table-menu" align="center"  valign="top" width="10%"><b>Tempat</b></td>
+        <td class="table-menu" align="center"  valign="top" width="25%"><b>Acara</b></td>
+        <td class="table-menu" align="center"  valign="top" width="5%"><b>Komite</b></td>
+        <td class="table-menu" align="center"  valign="top" width="10%"><b>Disposisi</b></td>
+        <td class="table-menu" align="center"  valign="top" width="15%"><b>Ket</b></td>
+        <td class="table-menu" align="center"  valign="top" width="13%"><b>Aksi</b></td>
+    </tr>
 <?php
 $no=$row_perpage*($page-1)+1;
 	$hari_awal="";
@@ -124,9 +136,21 @@ $no=$row_perpage*($page-1)+1;
 		if ($no%2==0){$bg="#C8C8C8";} else {$bg="#CCCCCC";}
 		 $imgdoc="images/doc1.gif";
 		 $imgedit="images/ico_edit_grey.gif";		    
-		    echo "<tr bgcolor=$bg><td align=\"center\" valign=\"top\">$no</td><td align=\"left\" valign=\"top\">$row[1]</td><td align=\"left\" valign=\"top\">$row[3]</td><td align=\"center\" valign=\"top\">$tgl_text</td><td  valign=\"top\">$waktu</td><td valign=\"top\" >$row[8]</td><td valign=\"top\">$row[9]</td><td valign=\"top\">$row[10]</td><td valign=\"top\">$row[11]</td><td valign=\"top\">$row[12]</td>";?>
-	<td valign="top"><a href="index.php?_mod=sekretariat&task=detail_undangan&id=<?php echo $row[0];?>" title="detail undangan"><img border=0 src="<?php echo $imgdoc;?>"></a>&nbsp;<a href="index.php?_mod=sekretariat&task=input_undangan&act=edit&id=<?php echo $row[0];?>" title="edit"><img border=0 src="<?php echo $imgedit;?>"</a></td>
-	</tr>	
+		    echo "
+		    <tr bgcolor=$bg>
+		        <td align=\"center\" valign=\"top\"><p>$no</p></td>
+		        <td align=\"left\" valign=\"top\"><p>$row[1]</p></td>
+		        <td valign=\"top\"><p>$row[3]</p></td>
+		        <td align=\"center\" valign=\"top\"><p>$tgl_text</p></td>
+		        <td valign=\"top\"><p>$waktu</p></td>
+		        <td valign=\"top\"><p>$row[8]</p></td>
+		        <td align=\"top\">$row[9]</td>
+		        <td valign=\"top\"><p>$row[10]</p></td>
+		        <td valign=\"top\"><p>$row[11]</p></td>
+		        <td valign=\"top\">$row[12]</td>";?>
+	            <td valign="top">
+                    <a href="index.php?_mod=sekretariat&task=detail_undangan&id=<?php echo $row[0];?>" title="detail undangan"><img border=0 src="<?php echo $imgdoc;?>"></a>&nbsp;<a href="index.php?_mod=sekretariat&task=input_undangan&act=edit&id=<?php echo $row[0];?>" title="edit"><img border=0 src="<?php echo $imgedit;?>"</a></td>
+	        </tr>
 		<?php
 		$no++;
 	}

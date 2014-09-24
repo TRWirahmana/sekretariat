@@ -23,97 +23,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="block_functions.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/block_functions.php">
+      <file leaf-file-name="admin_dokumen.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mod/sekretariat/admin_dokumen.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="46" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1071">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dikbud.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/css/dikbud.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="973" column="17" selection-start="22308" selection-end="22311" vertical-scroll-proportion="0.0" vertical-offset="16541" max-vertical-offset="22525">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hukor.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/css/hukor.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="14" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.0" vertical-offset="1649" max-vertical-offset="13396">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="left.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mod/sekretariat/left.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="133" selection-start="3931" selection-end="3931" vertical-scroll-proportion="0.0" vertical-offset="2255" max-vertical-offset="2737">
+            <state line="108" column="53" selection-start="3847" selection-end="3847" vertical-scroll-proportion="0.58391607" vertical-offset="1335" max-vertical-offset="2193">
               <folding>
-                <marker date="1410999008649" expanded="true" signature="1400:1414" placeholder="..." />
-                <marker date="1410999008649" expanded="true" signature="3916:3930" placeholder="..." />
+                <marker date="1411570006897" expanded="true" signature="3678:4128" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authent.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/authent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="133" selection-start="4525" selection-end="4525" vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="2380">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="report.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mod/sekretariat/report.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="173" column="24" selection-start="4799" selection-end="4799" vertical-scroll-proportion="0.0" vertical-offset="2941" max-vertical-offset="3553">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mod/sekretariat/detail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="60" selection-start="5829" selection-end="5829" vertical-scroll-proportion="0.0" vertical-offset="2417" max-vertical-offset="4896">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_surat.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mod/sekretariat/admin_surat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4692">
-              <folding>
-                <marker date="1410693659672" expanded="true" signature="8351:8758" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input_surat.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mod/sekretariat/input_surat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="258" column="14" selection-start="8455" selection-end="8455" vertical-scroll-proportion="0.0" vertical-offset="4386" max-vertical-offset="6035">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/sekretariat/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="27" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="2737">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -128,20 +44,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/include/include.php" />
-        <option value="$PROJECT_DIR$/include/block_functions.php" />
         <option value="$PROJECT_DIR$/template/user-header.php" />
         <option value="$PROJECT_DIR$/mod/sekretariat/report.php" />
         <option value="$PROJECT_DIR$/template/sekretariat/index.php" />
         <option value="$PROJECT_DIR$/mod/logout/logout.php" />
-        <option value="$PROJECT_DIR$/mod/sekretariat/admin_surat.php" />
         <option value="$PROJECT_DIR$/mod/sekretariat/report_agenda.php" />
-        <option value="$PROJECT_DIR$/mod/sekretariat/input_surat.php" />
-        <option value="$PROJECT_DIR$/mod/sekretariat/detail.php" />
         <option value="$PROJECT_DIR$/template/css/dikbud.css" />
         <option value="$PROJECT_DIR$/mod/sekretariat/left.php" />
         <option value="$PROJECT_DIR$/include/authent.php" />
         <option value="$PROJECT_DIR$/template/css/hukor.css" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/admin_surat.php" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/input_surat.php" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/input_dokumen.php" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/input_undangan.php" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/detail.php" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/detail_undangan.php" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/admin_dokumen.php" />
       </list>
     </option>
   </component>
@@ -149,8 +67,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1378" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -207,21 +125,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sekretariat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sekretariat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
+              <option name="myItemId" value="mod" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -239,25 +143,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sekretariat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sekretariat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
+              <option name="myItemId" value="mod" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,15 +199,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32674772" sideWeight="0.6706282" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17552084" sideWeight="0.6706282" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -348,33 +234,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mod/sekretariat/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.44320297" vertical-offset="0" max-vertical-offset="537" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/include.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="36" selection-start="704" selection-end="710" vertical-scroll-proportion="0.8547486" vertical-offset="0" max-vertical-offset="850" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="4" selection-start="1510" selection-end="1510" vertical-scroll-proportion="1.8449613" vertical-offset="0" max-vertical-offset="1700" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/sekretariat/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="27" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="2737">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mod/sekretariat/report_agenda.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="4" selection-start="3134" selection-end="3134" vertical-scroll-proportion="0.4055666" vertical-offset="1326" max-vertical-offset="2312" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/user-header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="57" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="561" />
@@ -392,61 +251,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mod/sekretariat/report.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="24" selection-start="4799" selection-end="4799" vertical-scroll-proportion="0.0" vertical-offset="2941" max-vertical-offset="3553">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mod/sekretariat/input_surat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="258" column="14" selection-start="8455" selection-end="8455" vertical-scroll-proportion="0.0" vertical-offset="4386" max-vertical-offset="6035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mod/sekretariat/detail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="60" selection-start="5829" selection-end="5829" vertical-scroll-proportion="0.0" vertical-offset="2417" max-vertical-offset="4896">
-          <folding />
-        </state>
+        <state line="196" column="14" selection-start="6175" selection-end="6175" vertical-scroll-proportion="0.0" vertical-offset="3332" max-vertical-offset="3553" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/css/dikbud.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="973" column="17" selection-start="22308" selection-end="22311" vertical-scroll-proportion="0.0" vertical-offset="16541" max-vertical-offset="22525">
-          <folding />
-        </state>
+        <state line="959" column="17" selection-start="22088" selection-end="22088" vertical-scroll-proportion="0.0" vertical-offset="16303" max-vertical-offset="22525" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mod/sekretariat/left.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="133" selection-start="3931" selection-end="3931" vertical-scroll-proportion="0.0" vertical-offset="2255" max-vertical-offset="2737">
-          <folding>
-            <marker date="1410999008649" expanded="true" signature="1400:1414" placeholder="..." />
-            <marker date="1410999008649" expanded="true" signature="3916:3930" placeholder="..." />
-          </folding>
-        </state>
+        <state line="85" column="132" selection-start="3930" selection-end="3930" vertical-scroll-proportion="0.0" vertical-offset="2255" max-vertical-offset="2737" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/authent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="133" selection-start="4525" selection-end="4525" vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="2380">
-          <folding />
-        </state>
+        <state line="84" column="64" selection-start="4888" selection-end="4888" vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="2380" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/css/hukor.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="14" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.0" vertical-offset="1649" max-vertical-offset="13396">
-          <folding />
-        </state>
+        <state line="122" column="14" selection-start="3000" selection-end="3000" vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="13396" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mod/sekretariat/admin_surat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4692">
+        <state line="0" column="0" selection-start="0" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4692" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/block_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="46" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1071" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/input_surat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="239" column="54" selection-start="7513" selection-end="7520" vertical-scroll-proportion="0.6314581" vertical-offset="3054" max-vertical-offset="4420" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/input_dokumen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="18" selection-start="3305" selection-end="3589" vertical-scroll-proportion="-0.858783" vertical-offset="3009" max-vertical-offset="4522" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/detail_undangan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="2" selection-start="2490" selection-end="2490" vertical-scroll-proportion="-3.0011482" vertical-offset="4212" max-vertical-offset="5848" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/input_undangan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="232" column="57" selection-start="8450" selection-end="8450" vertical-scroll-proportion="1.1905855" vertical-offset="2907" max-vertical-offset="5508" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="60" selection-start="5830" selection-end="5830" vertical-scroll-proportion="1.9173363" vertical-offset="931" max-vertical-offset="4913" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/admin_dokumen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="53" selection-start="3847" selection-end="3847" vertical-scroll-proportion="0.58391607" vertical-offset="1335" max-vertical-offset="2193">
           <folding>
-            <marker date="1410693659672" expanded="true" signature="8351:8758" placeholder="..." />
+            <marker date="1411570006897" expanded="true" signature="3678:4128" placeholder="..." />
           </folding>
         </state>
       </provider>
