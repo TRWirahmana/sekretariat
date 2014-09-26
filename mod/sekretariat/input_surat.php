@@ -163,6 +163,7 @@ $tahun=date("Y");
                 <input type="text" name="no_surat" id="no_surat" value="<?php echo $no_surat;?>" size="35" class="text-input"/>
             </div>
         </div>
+
         <div class="clearfix"></div>
         <div class="control-group">
             <label class="control-label span7">Tanggal Surat</label>
@@ -236,6 +237,7 @@ $tahun=date("Y");
             </div>
         </div>
 
+        <div class="clearfix"></div>
         <div class="control-group">
             <label class="control-label span7">Tanggal Diterima</label>
             <div class="controls">
