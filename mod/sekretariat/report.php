@@ -124,12 +124,29 @@ $send_url = "index.php";
                 <div class="control-group">
                     <label class="control-label span7">Tanggal Surat</label>
                     <div class="controls span17">
-                        <input type="text" name="tgl_surat" value="<?php echo $tgl_surat;?>" size="10"/><script language="JavaScript">
-                            new tcal ({
-                                'formname': 'form',
-                                'controlname': 'tgl_surat'
+                        <input type="text" id="tgl_surat" name="tgl_surat" value="<?php echo $tgl_surat;?>" size="10"/>
+                        <script language="JavaScript">
+                            $(function(){
+                                $('#tgl_surat').datepicker({
+                                    inline:true,
+                                    showOtherMonths: true,
+                                    altField: "#tgl_surat",
+                                    altFormat: "yy-mm-dd",
+                                    dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                                    onSelect: function(dateText){
+                                        $('#tgl_surat').html(dateText);
+                                    }
+                                });
                             });
                         </script>
+<!--                        <input type="text" name="tgl_surat" value="--><?php //echo $tgl_surat;?><!--" size="10"/><script language="JavaScript">-->
+<!--                            new tcal ({-->
+<!--                                'formname': 'form',-->
+<!--                                'controlname': 'tgl_surat'-->
+<!--                            });-->
+<!--                        </script>-->
                     </div>
                 </div>
 
@@ -168,7 +185,7 @@ if ($jml!=0){
 echo "</td></tr>";
 echo "</table>";
 ?>
-<table class=table cellpadding=2 cellspacing=1 width=100%>
+<table class=table cellpadding=2 cellspacing=1 width=100% style="margin-top: 5px;">
     <tr class=\"bodystyle\" bgcolor='#757575' align=center height="3">
         <td class="table-menu" align="center" valign="top" width="2%"><b>No</b></td>
         <td class="table-menu" align="center" valign="top" width="5%"><b>No. Agenda TU</b></td>

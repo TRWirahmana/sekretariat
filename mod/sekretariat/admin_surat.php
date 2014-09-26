@@ -170,34 +170,6 @@ $send_url = "index.php?_mod=$_mod&task=admin_surat";
 <!--</div>-->
 
 </form>
-<!--<table border=0 width="100%" style="border:1px solid #cccccc"><tr><td>-->
-<!--<form action="index.php" method="get" name="form">-->
-<!--	<table>-->
-<!--		   <tr>-->
-<!--               <td width="150px">Perihal/Nomor Agenda/No surat/Tanggal</td>-->
-<!--               <td><input type="text" name="key" value="" size="35"/></td>-->
-<!--           </tr>-->
-<!--		   <tr>-->
-<!--               <td width="150px">Tanggal Terima</td>-->
-<!--			<td><input type="text" name="tgl_terima" value="" size="10"/><script language="JavaScript">-->
-<!--	new tcal ({-->
-<!--		'formname': 'form',-->
-<!--		'controlname': 'tgl_terima'-->
-<!--	});-->
-<!--	</script>-->
-<!--			    -->
-<!--			</td>-->
-<!--			</tr>-->
-<!--			<tr><td><input class="btn btn-primary" type="submit" name="submit" value="Proses"/></td></tr>-->
-<!--			<input type="hidden" name="_mod" value="sekretariat">-->
-<!--			<input type="hidden" name="task" value="admin_surat">-->
-<!--			<input type="hidden" name="act" value="go">-->
-<!--			<input type="hidden" name="page" value="1">-->
-<!--			-->
-<!--	</table>-->
-<!--</form>-->
-<!--</td></tr>-->
-<!--</table>-->
     </div>
 <hr>
 <?php

@@ -36,47 +36,112 @@ $sql = "SELECT * FROM undangan ";
 	$sql .=" order by undangan_id DESC";
 
 	$link = 'index.php?_mod=sekretariat&task=admin_undangan&act=go&key='.$key.'&tgl_terima='.$tgl_terima;
-	echo $sql;
+//	echo $sql;
 	$row_perpage=10;
 	$jml=mysql_num_rows(mysql_query($sql));
 	$pager = new PS_Pagination($conn,$sql,$row_perpage,5,$link);
 	$rs = $pager->paginate();
-echo "Cari Undangan >> </br></br>";
+//echo "Cari Undangan >> </br></br>";
 
 
 $send_url = "index.php?_mod=$_mod&task=admin_undangan";
 ?>
-<table border=0 width="100%" style="border:1px solid #cccccc"><tr><td>
-<form action="index.php" method="get" name="form">
-	<table>
-		   <tr><td width="150px">Acara/Nomor Agenda/No Undangan</td><td><input type="text" name="key" value="" size="35"/></td></tr>
-		   <tr><td width="150px">Tanggal Terima</td>
-			<td><input type="text" name="tgl_terima" value="" size="10"/><script language="JavaScript">
-	new tcal ({
-		'formname': 'form',
-		'controlname': 'tgl_terima'
-	});
-	</script>
-			    
-			</td>
-			</tr>
-			<tr><td><input class="button" type="submit" name="submit" value="Proses"/></td></tr>
-			<input type="hidden" name="_mod" value="sekretariat">
-			<input type="hidden" name="task" value="admin_undangan">
-			<input type="hidden" name="act" value="go">
-			<input type="hidden" name="page" value="1">
-			
-	</table>
-</form>
-</td></tr>
-</table>
+<div class="content-non-title">
+    <form action="index.php" method="get" name="form">
+        <div class="row-fluid">
+            <div class="span24">
+                <fieldset>
+                    <div class="nav nav-tabs">
+                        <h3> Daftar Undangan</h3>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label span7">Acara/Nomor Agenda/No Undangan</label>
+                        <div class="controls span17">
+                            <input type="text" name="key" value="" size="35"/>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label span7">Tanggal Terima</label>
+                        <div class="controls span17">
+                            <input type="text" id="date" name="tgl_terima" value="" size="10"/>
+                            <script language="JavaScript">
+                                $(function(){
+                                    $('#date').datepicker({
+                                        inline:true,
+                                        showOtherMonths: true,
+                                        altField: "#date",
+                                        altFormat: "yy-mm-dd",
+                                        dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                                        onSelect: function(dateText){
+                                            $('#date').html(dateText);
+                                        }
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label span7"></label>
+                        <div class="controls span17">
+                            <input class="btn btn-primary" type="submit" name="submit" value="Proses"/>
+                        </div>
+                    </div>
+
+
+
+                </fieldset>
+            </div>
+
+        </div>
+
+        <!--<div class="form-actions">-->
+
+        <input type="hidden" name="_mod" value="sekretariat">
+        <input type="hidden" name="task" value="admin_undangan">
+        <input type="hidden" name="act" value="go">
+        <input type="hidden" name="page" value="1">
+        <!--</div>-->
+
+    </form>
+</div>
+<hr>
+
+<!--<table border=0 width="100%" style="border:1px solid #cccccc"><tr><td>-->
+<!--<form action="index.php" method="get" name="form">-->
+<!--	<table>-->
+<!--		   <tr><td width="150px">Acara/Nomor Agenda/No Undangan</td><td><input type="text" name="key" value="" size="35"/></td></tr>-->
+<!--		   <tr><td width="150px">Tanggal Terima</td>-->
+<!--			<td><input type="text" name="tgl_terima" value="" size="10"/><script language="JavaScript">-->
+<!--	new tcal ({-->
+<!--		'formname': 'form',-->
+<!--		'controlname': 'tgl_terima'-->
+<!--	});-->
+<!--	</script>-->
+<!--			    -->
+<!--			</td>-->
+<!--			</tr>-->
+<!--			<tr><td><input class="button" type="submit" name="submit" value="Proses"/></td></tr>-->
+<!--			<input type="hidden" name="_mod" value="sekretariat">-->
+<!--			<input type="hidden" name="task" value="admin_undangan">-->
+<!--			<input type="hidden" name="act" value="go">-->
+<!--			<input type="hidden" name="page" value="1">-->
+<!--			-->
+<!--	</table>-->
+<!--</form>-->
+<!--</td></tr>-->
+<!--</table>-->
 <?php
 //extract($_POST);
 ?>
-<h2 align="center">DAFTAR UNDANGAN</h2>
+<!--<h2 align="center">DAFTAR UNDANGAN</h2>-->
 <?php
 echo "<table border=0 width=100%>";
-	echo "<td><input type=button onClick=\"location.href='index.php?_mod=sekretariat&task=input_undangan&act=new'\" value='Input Undangan Baru'> </td><td align=right>";
+	echo "<td><input class='btn btn-primary' type=button onClick=\"location.href='index.php?_mod=sekretariat&task=input_undangan&act=new'\" value='Input Undangan Baru'> </td><td align=right>";
 	if ($jml!=0){
 	//echo "Page ";
 	echo $pager->renderFullNav();	}

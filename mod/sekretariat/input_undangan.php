@@ -95,13 +95,30 @@ $tahun=date("Y");
             <div class="control-group">
                 <label class="control-label span7">Tanggal Surat</label>
                 <div class="controls">
-                    <input type="text" name="tgl_undangan" value="<?php echo $tgl_undangan;?>" size="10"/>
+                    <input type="text" id="tgl_undangan" name="tgl_undangan" value="<?php echo $tgl_undangan;?>" size="10"/>
                     <script language="JavaScript">
-                        new tcal ({
-                            'formname': 'form',
-                            'controlname': 'tgl_undangan'
+                        $(function(){
+                            $('#tgl_undangan').datepicker({
+                                inline:true,
+                                showOtherMonths: true,
+                                altField: "#tgl_undangan",
+                                altFormat: "yy-mm-dd",
+                                dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                                onSelect: function(dateText){
+                                    $('#tgl_undangan').html(dateText);
+                                }
+                            });
                         });
                     </script>
+<!--                    <input type="text" name="tgl_undangan" value="--><?php //echo $tgl_undangan;?><!--" size="10"/>-->
+<!--                    <script language="JavaScript">-->
+<!--                        new tcal ({-->
+<!--                            'formname': 'form',-->
+<!--                            'controlname': 'tgl_undangan'-->
+<!--                        });-->
+<!--                    </script>-->
                 </div>
             </div>
 
@@ -136,32 +153,71 @@ $tahun=date("Y");
             <div class="control-group">
                 <label class="control-label span7">Tanggal Diterima</label>
                 <div class="controls">
-                    <input type="text" name="tgl_terima" value="<?php echo $tgl_terima;?>" size="10"/>
+                    <input type="text" id="tgl_terima" name="tgl_terima" value="<?php echo $tgl_terima;?>" size="10"/>
                     <script language="JavaScript">
-                        new tcal ({
-                            'formname': 'form',
-                            'controlname': 'tgl_terima'
+                        $(function(){
+                            $('#tgl_terima').datepicker({
+                                inline:true,
+                                showOtherMonths: true,
+                                altField: "#tgl_terima",
+                                altFormat: "yy-mm-dd",
+                                dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                                onSelect: function(dateText){
+                                    $('#tgl_terima').html(dateText);
+                                }
+                            });
                         });
                     </script>
+<!--                    <input type="text" name="tgl_terima" value="--><?php //echo $tgl_terima;?><!--" size="10"/>-->
+<!--                    <script language="JavaScript">-->
+<!--                        new tcal ({-->
+<!--                            'formname': 'form',-->
+<!--                            'controlname': 'tgl_terima'-->
+<!--                        });-->
+<!--                    </script>-->
                 </div>
             </div>
 
             <div class="control-group">
                 <label class="control-label span7">Tanggal Acara</label>
                 <div class="controls">
-                    <input type="text" name="tanggal" value="<?php echo $tanggal;?>" size="10"/>
+                    <input type="text" class="span5" id="tanggal" name="tanggal" value="<?php echo $tanggal;?>" size="10"/>
                     <script language="JavaScript">
-                        new tcal ({
-                            'formname': 'form',
-                            'controlname': 'tanggal'
+                        $(function(){
+                            $('#tanggal').datepicker({
+                                inline:true,
+                                showOtherMonths: true,
+                                altField: "#tanggal",
+                                altFormat: "yy-mm-dd",
+                                dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                                onSelect: function(dateText){
+                                    $('#tanggal').html(dateText);
+                                }
+                            });
                         });
                     </script>
+
                     -
-                    <input type="text" name="tanggal2" value="<?php echo $tanggal2;?>" size="10"/>
+
+                    <input type="text" id="tanggal2" class="span5" name="tanggal2" value="<?php echo $tanggal2;?>" size="10"/>
                     <script language="JavaScript">
-                        new tcal ({
-                            'formname': 'form',
-                            'controlname': 'tanggal2'
+                        $(function(){
+                            $('#tanggal2').datepicker({
+                                inline:true,
+                                showOtherMonths: true,
+                                altField: "#tanggal2",
+                                altFormat: "yy-mm-dd",
+                                dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                                onSelect: function(dateText){
+                                    $('#tanggal2').html(dateText);
+                                }
+                            });
                         });
                     </script>
                 </div>
@@ -170,9 +226,9 @@ $tahun=date("Y");
             <div class="control-group">
                 <label class="control-label span7">Waktu</label>
                 <div class="controls">
-                    <input type="text" name="jam" value="<?php echo $jam;?>" size="6"/>
+                    <input type="text" name="jam" class="span5" value="<?php echo $jam;?>" size="6"/>
                     :
-                    <input type="text" name="selesai" value="<?php echo $selesai;?>" size="6"/>
+                    <input type="text" name="selesai" class="span5" value="<?php echo $selesai;?>" size="6"/>
                 </div>
             </div>
 
@@ -219,13 +275,24 @@ $tahun=date("Y");
             <div class="control-group">
                 <label class="control-label span7">Tanggal Disposisi</label>
                 <div class="controls">
-                    <input type="text" name="tgl_disposisi" value="<?php echo $tgl_disposisi;?>" size="10"/>
+                    <input type="text" id="tgl_disposisi" name="tgl_disposisi" value="<?php echo $tgl_disposisi;?>" size="10"/>
                     <script language="JavaScript">
-                        new tcal ({
-                            'formname': 'form',
-                            'controlname': 'tgl_disposisi'
+                        $(function(){
+                            $('#tgl_disposisi').datepicker({
+                                inline:true,
+                                showOtherMonths: true,
+                                altField: "#tgl_disposisi",
+                                altFormat: "yy-mm-dd",
+                                dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                                onSelect: function(dateText){
+                                    $('#tgl_disposisi').html(dateText);
+                                }
+                            });
                         });
                     </script>
+
                 </div>
             </div>
 

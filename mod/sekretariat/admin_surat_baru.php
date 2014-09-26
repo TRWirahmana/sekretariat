@@ -39,41 +39,109 @@ $sql = "SELECT * FROM surat_masuk WHERE status=0";
 	$jml=mysql_num_rows(mysql_query($sql));
 	$pager = new PS_Pagination($conn,$sql,$row_perpage,5,$link);
 	$rs = $pager->paginate();
-echo "Cari Surat Masuk >> </br></br>";
+//echo "Cari Surat Masuk >> </br></br>";
 
 
 $send_url = "index.php?_mod=$_mod&task=admin_surat_baru";
 ?>
-<table border=0 width="100%" style="border:1px solid #cccccc"><tr><td>
-<form action="index.php" method="get" name="form">
-	<table>
-		   <tr><td width="150px">Perihal/Nomor Agenda/No surat/Tanggal</td><td><input type="text" name="key" value="" size="35"/></td></tr>
-		   <tr><td width="150px">Tanggal Surat</td>
-			<td><input type="text" name="tgl_surat" value="" size="10"/><script language="JavaScript">
-	new tcal ({
-		'formname': 'form',
-		'controlname': 'tgl_surat'
-	});
-	</script>
-			    
-			</td>
-			</tr>
-			<tr><td><input class="button" type="submit" name="submit" value="Proses"/></td></tr>
-			<input type="hidden" name="_mod" value="sekretariat">
-			<input type="hidden" name="task" value="admin_surat">
-			<input type="hidden" name="act" value="go">
-			<input type="hidden" name="page" value="1">
-			
-	</table>
-</form>
-</td></tr>
-</table>
+<!--<table border=0 width="100%" style="border:1px solid #cccccc"><tr><td>-->
+<!--<form action="index.php" method="get" name="form">-->
+<!--	<table>-->
+<!--		   <tr><td width="150px">Perihal/Nomor Agenda/No surat/Tanggal</td><td><input type="text" name="key" value="" size="35"/></td></tr>-->
+<!--		   <tr><td width="150px">Tanggal Surat</td>-->
+<!--			<td><input type="text" name="tgl_surat" value="" size="10"/><script language="JavaScript">-->
+<!--	new tcal ({-->
+<!--		'formname': 'form',-->
+<!--		'controlname': 'tgl_surat'-->
+<!--	});-->
+<!--	</script>-->
+<!--			    -->
+<!--			</td>-->
+<!--			</tr>-->
+<!--			<tr><td><input class="button" type="submit" name="submit" value="Proses"/></td></tr>-->
+<!--			<input type="hidden" name="_mod" value="sekretariat">-->
+<!--			<input type="hidden" name="task" value="admin_surat">-->
+<!--			<input type="hidden" name="act" value="go">-->
+<!--			<input type="hidden" name="page" value="1">-->
+<!--			-->
+<!--	</table>-->
+<!--</form>-->
+<!--</td></tr>-->
+<!--</table>-->
+
+<div class="content-non-title">
+    <form action="index.php" method="get" name="form">
+        <div class="row-fluid">
+            <div class="span24">
+                <fieldset>
+                    <div class="nav nav-tabs">
+                        <h3> Daftar Surat Belum Diposisi</h3>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label span7">Perihal/Nomor Agenda/No surat/Tanggal</label>
+                        <div class="controls span17">
+                            <input type="text" name="key" value="" size="35"/>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label span7">Tanggal Terima</label>
+                        <div class="controls span17">
+                            <input type="text" id="date" name="tgl_surat" value="" size="10"/>
+                            <script language="JavaScript">
+                                $(function(){
+                                    $('#date').datepicker({
+                                        inline:true,
+                                        showOtherMonths: true,
+                                        altField: "#date",
+                                        altFormat: "yy-mm-dd",
+                                        dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                                        onSelect: function(dateText){
+                                            $('#date').html(dateText);
+                                        }
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label span7"></label>
+                        <div class="controls span17">
+                            <input class="btn btn-primary" type="submit" name="submit" value="Proses"/>
+                        </div>
+                    </div>
+
+
+
+                </fieldset>
+            </div>
+
+        </div>
+
+        <!--<div class="form-actions">-->
+
+        <input type="hidden" name="_mod" value="sekretariat">
+        <input type="hidden" name="task" value="admin_surat">
+        <input type="hidden" name="act" value="go">
+        <input type="hidden" name="page" value="1">
+
+        <!--</div>-->
+
+    </form>
+</div>
+<hr>
+
 <?php
 //extract($_POST);
 ?>
-<h2 align="center">DAFTAR SURAT BELUM DIDISPOSISI</h2><?php
+<!--<h2 align="center">DAFTAR SURAT BELUM DIDISPOSISI</h2>-->
+<?php
 echo "<table border=0 width=100%>";
-	echo "<td><input type=button onClick=\"location.href='index.php?_mod=sekretariat&task=input_surat&act=new'\" value='Input Surat Baru'> </td><td align=right>";
+	echo "<td><input class='btn btn-primary' type=button onClick=\"location.href='index.php?_mod=sekretariat&task=input_surat&act=new'\" value='Input Surat Baru'> </td><td align=right>";
 	if ($jml!=0){
 	//echo "Page ";
 	echo $pager->renderFullNav();	}

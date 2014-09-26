@@ -116,13 +116,30 @@ $tahun=date("Y");
             <div class="control-group">
                 <label class="control-label span7">Tanggal Masuk</label>
                 <div class="controls">
-                    <input type="text" name="tgl_masuk" value="<?php echo $tgl_masuk;?>" size="10"/>
+                    <input type="text" id="tgl_masuk" name="tgl_masuk" value="<?php echo $tgl_masuk;?>" size="10"/>
                     <script language="JavaScript">
-                        new tcal ({
-                            'formname': 'form',
-                            'controlname': 'tgl_masuk'
+                        $(function(){
+                            $('#tgl_masuk').datepicker({
+                                inline:true,
+                                showOtherMonths: true,
+                                altField: "#tgl_masuk",
+                                altFormat: "yy-mm-dd",
+                                dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                                onSelect: function(dateText){
+                                    $('#tgl_masuk').html(dateText);
+                                }
+                            });
                         });
                     </script>
+<!--                    <input type="text" name="tgl_masuk" value="--><?php //echo $tgl_masuk;?><!--" size="10"/>-->
+<!--                    <script language="JavaScript">-->
+<!--                        new tcal ({-->
+<!--                            'formname': 'form',-->
+<!--                            'controlname': 'tgl_masuk'-->
+<!--                        });-->
+<!--                    </script>-->
                 </div>
             </div>
 
@@ -156,43 +173,61 @@ $tahun=date("Y");
         <!--right content-->
         <div clas="span12">
             <div class="control-group">
-                <label class="control-label span7">Tujuan Dokumen</label>
+                <label class="control-label span5">Tujuan Dokumen</label>
                 <div class="controls">
                     <input type="text" name="tujuan" value="<?php echo $tujuan;?>" size="35"/>
                 </div>
             </div>
 
             <div class="control-group">
-                <label class="control-label span7">Tanggal Keluar (dari Karo)</label>
+                <label class="control-label span5">Tanggal Keluar (dari Karo)</label>
                 <div class="controls">
-                    <input type="text" name="tgl_keluar" value="<?php echo $tgl_keluar;?>" size="10"/>
+                    <input type="text" id="tgl_keluar" name="tgl_keluar" value="<?php echo $tgl_keluar;?>" size="10"/>
                     <script language="JavaScript">
-                        new tcal ({
-                            'formname': 'form',
-                            'controlname': 'tgl_keluar'
+                        $(function(){
+                            $('#tgl_keluar').datepicker({
+                                inline:true,
+                                showOtherMonths: true,
+                                altField: "#tgl_keluar",
+                                altFormat: "yy-mm-dd",
+                                dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                                onSelect: function(dateText){
+                                    $('#tgl_keluar').html(dateText);
+                                }
+                            });
                         });
                     </script>
+<!--                    <input type="text" name="tgl_keluar" value="--><?php //echo $tgl_keluar;?><!--" size="10"/>-->
+<!--                    <script language="JavaScript">-->
+<!--                        new tcal ({-->
+<!--                            'formname': 'form',-->
+<!--                            'controlname': 'tgl_keluar'-->
+<!--                        });-->
+<!--                    </script>-->
                 </div>
             </div>
 
             <div class="control-group">
-                <label class="control-label span7">Penerima</label>
+                <label class="control-label span5">Penerima</label>
                 <div class="controls">
                     <input type="text" name="penerima" value="<?php echo $penerima;?>" size="35"/>
                 </div>
             </div>
 
             <div class="control-group">
-                <label class="control-label span7">Keterangan</label>
-                <div class="controls">
-                    <textarea rows=4 cols=30 name="keterangan"><?php echo $keterangan;?></textarea>
+                <label class="control-label span5">Keterangan</label>
+                <div class="controls span5">
+                    <textarea rows=4 name="keterangan"><?php echo $keterangan;?></textarea>
                 </div>
             </div>
+            <div class="clearfix"></div>
 
             <div class="control-group">
-                <label class="control-label span7">Status</label>
+                <label class="control-label span3" style="margin-right: 25px;">Status</label>
                 <div class="controls">
-                    <INPUT TYPE=CHECKBOX NAME="status" value="1" <?php if (($act=="edit") && ($row[9]=="1")){ echo "checked";}?>>Selesai
+                    <INPUT TYPE=CHECKBOX NAME="status" value="1" <?php if (($act=="edit") && ($row[9]=="1")){ echo "checked";}?> >Selesai
                 </div>
             </div>
         </div>
