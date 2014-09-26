@@ -1,6 +1,7 @@
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="template/sekretariat/style.css">
 <script language="JavaScript" src="inc/Calendar/calendar_db.js"></script>
 <link rel="stylesheet" href="inc/Calendar/calendar.css">
+
 <?php
 
 function dit_show($id)
@@ -124,10 +125,21 @@ $send_url = "index.php";
                 <div class="control-group">
                     <label class="control-label span7">Tanggal Surat</label>
                     <div class="controls span17">
-                        <input type="text" name="tgl_surat" value="<?php echo $tgl_surat;?>" size="10"/><script language="JavaScript">
-                            new tcal ({
-                                'formname': 'form',
-                                'controlname': 'tgl_surat'
+                        <input type="text" name="tgl_surat" id="date" value="<?php echo $tgl_surat;?>" size="10"/>
+                        <script language="JavaScript">
+                            $(function(){
+                                $('#date').datepicker({
+                                    inline:true,
+                                    showOtherMonths: true,
+                                    altField: "#date",
+                                    altFormat: "yy-mm-dd",
+                                    dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                                    onSelect: function(dateText){
+                                        $('#date').html(dateText);
+                                    }
+                                });
                             });
                         </script>
                     </div>

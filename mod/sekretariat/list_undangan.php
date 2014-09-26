@@ -60,12 +60,22 @@ $send_url = "index.php";
 	<table>
 		   <tr><td width="150px">Acara/Komite</td><td><input type="text" name="key" value="<?php echo $key;?>" size="35"/></td></tr>
 		   <tr><td width="150px">Tanggal</td>
-			<td><input type="text" name="tanggal" value="<?php echo $tanggal;?>" size="10"/><script language="JavaScript">
-	new tcal ({
-		'formname': 'form',
-		'controlname': 'tanggal'
-	});
-	</script>
+			<td><input type="text" name="tanggal" id="date" value="<?php echo $tanggal;?>" size="10"/><script language="JavaScript">
+                    $(function(){
+                        $('#date').datepicker({
+                            inline:true,
+                            showOtherMonths: true,
+                            altField: "#date",
+                            altFormat: "yy-mm-dd",
+                            dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                            onSelect: function(dateText){
+                                $('#date').html(dateText);
+                            }
+                        });
+                    });
+                </script>
 			    
 			</td>
 			</tr>

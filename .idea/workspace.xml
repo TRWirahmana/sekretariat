@@ -23,13 +23,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="admin_dokumen.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mod/sekretariat/admin_dokumen.php">
+      <file leaf-file-name="admin_surat.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mod/sekretariat/admin_surat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="53" selection-start="3847" selection-end="3847" vertical-scroll-proportion="0.58391607" vertical-offset="1335" max-vertical-offset="2193">
+            <state line="2" column="0" selection-start="152" selection-end="152" vertical-scroll-proportion="63.423077" vertical-offset="1683" max-vertical-offset="4692">
               <folding>
-                <marker date="1411570006897" expanded="true" signature="3678:4128" placeholder="..." />
+                <marker date="1411701780541" expanded="true" signature="8350:8757" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="report.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mod/sekretariat/report.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="128" column="23" selection-start="4099" selection-end="4888" vertical-scroll-proportion="-20.923077" vertical-offset="1632" max-vertical-offset="3995">
+              <folding>
+                <marker date="1411702593799" expanded="true" signature="7557:7983" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_surat_baru.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mod/sekretariat/admin_surat_baru.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="60" selection-start="1580" selection-end="1580" vertical-scroll-proportion="-17.653847" vertical-offset="408" max-vertical-offset="2567">
+              <folding>
+                <marker date="1411702642525" expanded="true" signature="4851:5278" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_undangan.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mod/sekretariat/admin_undangan.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="84" selection-start="1688" selection-end="2372" vertical-scroll-proportion="-13.076923" vertical-offset="561" max-vertical-offset="2992">
+              <folding>
+                <marker date="1411702669810" expanded="true" signature="6043:6567" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list_undangan.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mod/sekretariat/list_undangan.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="58" selection-start="1810" selection-end="1810" vertical-scroll-proportion="0.6340326" vertical-offset="510" max-vertical-offset="2975">
+              <folding>
+                <marker date="1411702766603" expanded="true" signature="5297:5747" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input_dokumen.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mod/sekretariat/input_dokumen.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="145" column="0" selection-start="4146" selection-end="4146" vertical-scroll-proportion="-2.6153846" vertical-offset="2397" max-vertical-offset="4930">
+              <folding>
+                <element signature="n#style#0;n#div#2;n#form#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input_surat.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mod/sekretariat/input_surat.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="185" column="25" selection-start="4724" selection-end="5435" vertical-scroll-proportion="-25.153847" vertical-offset="2491" max-vertical-offset="6052">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -44,22 +108,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/template/user-header.php" />
-        <option value="$PROJECT_DIR$/mod/sekretariat/report.php" />
-        <option value="$PROJECT_DIR$/template/sekretariat/index.php" />
-        <option value="$PROJECT_DIR$/mod/logout/logout.php" />
-        <option value="$PROJECT_DIR$/mod/sekretariat/report_agenda.php" />
         <option value="$PROJECT_DIR$/template/css/dikbud.css" />
         <option value="$PROJECT_DIR$/mod/sekretariat/left.php" />
         <option value="$PROJECT_DIR$/include/authent.php" />
         <option value="$PROJECT_DIR$/template/css/hukor.css" />
-        <option value="$PROJECT_DIR$/mod/sekretariat/admin_surat.php" />
-        <option value="$PROJECT_DIR$/mod/sekretariat/input_surat.php" />
-        <option value="$PROJECT_DIR$/mod/sekretariat/input_dokumen.php" />
         <option value="$PROJECT_DIR$/mod/sekretariat/input_undangan.php" />
         <option value="$PROJECT_DIR$/mod/sekretariat/detail.php" />
         <option value="$PROJECT_DIR$/mod/sekretariat/detail_undangan.php" />
         <option value="$PROJECT_DIR$/mod/sekretariat/admin_dokumen.php" />
+        <option value="$USER_HOME$/Desktop/rep.php" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/admin_surat.php" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/input_surat.php" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/input_dokumen.php" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/report.php" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/admin_surat_baru.php" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/admin_undangan.php" />
+        <option value="$PROJECT_DIR$/mod/sekretariat/list_undangan.php" />
       </list>
     </option>
   </component>
@@ -203,16 +267,16 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17552084" sideWeight="0.6706282" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -234,36 +298,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/template/user-header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="57" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="561" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/css/dusk.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="285" column="61" selection-start="22423" selection-end="22434" vertical-scroll-proportion="-6.72" vertical-offset="4677" max-vertical-offset="16031" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/master.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="66" selection-start="1031" selection-end="1031" vertical-scroll-proportion="-1.3950381" vertical-offset="1020" max-vertical-offset="6817" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mod/sekretariat/report.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="14" selection-start="6175" selection-end="6175" vertical-scroll-proportion="0.0" vertical-offset="3332" max-vertical-offset="3553" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/css/dikbud.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="959" column="17" selection-start="22088" selection-end="22088" vertical-scroll-proportion="0.0" vertical-offset="16303" max-vertical-offset="22525" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mod/sekretariat/left.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="132" selection-start="3930" selection-end="3930" vertical-scroll-proportion="0.0" vertical-offset="2255" max-vertical-offset="2737" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/authent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="84" column="64" selection-start="4888" selection-end="4888" vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="2380" />
@@ -274,24 +308,9 @@
         <state line="122" column="14" selection-start="3000" selection-end="3000" vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="13396" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mod/sekretariat/admin_surat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4692" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/block_functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="46" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1071" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mod/sekretariat/input_surat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="239" column="54" selection-start="7513" selection-end="7520" vertical-scroll-proportion="0.6314581" vertical-offset="3054" max-vertical-offset="4420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mod/sekretariat/input_dokumen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="18" selection-start="3305" selection-end="3589" vertical-scroll-proportion="-0.858783" vertical-offset="3009" max-vertical-offset="4522" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mod/sekretariat/detail_undangan.php">
@@ -311,9 +330,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mod/sekretariat/admin_dokumen.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="53" selection-start="3847" selection-end="3847" vertical-scroll-proportion="0.58391607" vertical-offset="1335" max-vertical-offset="2193">
+        <state line="77" column="62" selection-start="2863" selection-end="2863" vertical-scroll-proportion="-0.65384614" vertical-offset="1292" max-vertical-offset="2193" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sekretariat_alpha/mod/sekretariat/report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="190" column="12" selection-start="0" selection-end="6080" vertical-scroll-proportion="1.1951779" vertical-offset="2189" max-vertical-offset="3332" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/admin_surat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="152" selection-end="152" vertical-scroll-proportion="63.423077" vertical-offset="1683" max-vertical-offset="4692">
           <folding>
-            <marker date="1411570006897" expanded="true" signature="3678:4128" placeholder="..." />
+            <marker date="1411701780541" expanded="true" signature="8350:8757" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/input_stock.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/input_surat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="185" column="25" selection-start="4724" selection-end="5435" vertical-scroll-proportion="-25.153847" vertical-offset="2491" max-vertical-offset="6052">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/input_dokumen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="0" selection-start="4146" selection-end="4146" vertical-scroll-proportion="-2.6153846" vertical-offset="2397" max-vertical-offset="4930">
+          <folding>
+            <element signature="n#style#0;n#div#2;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="23" selection-start="4099" selection-end="4888" vertical-scroll-proportion="-20.923077" vertical-offset="1632" max-vertical-offset="3995">
+          <folding>
+            <marker date="1411702593799" expanded="true" signature="7557:7983" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/admin_surat_baru.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="60" selection-start="1580" selection-end="1580" vertical-scroll-proportion="-17.653847" vertical-offset="408" max-vertical-offset="2567">
+          <folding>
+            <marker date="1411702642525" expanded="true" signature="4851:5278" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/admin_undangan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="84" selection-start="1688" selection-end="2372" vertical-scroll-proportion="-13.076923" vertical-offset="561" max-vertical-offset="2992">
+          <folding>
+            <marker date="1411702669810" expanded="true" signature="6043:6567" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mod/sekretariat/list_undangan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="58" selection-start="1810" selection-end="1810" vertical-scroll-proportion="0.6340326" vertical-offset="510" max-vertical-offset="2975">
+          <folding>
+            <marker date="1411702766603" expanded="true" signature="5297:5747" placeholder="..." />
           </folding>
         </state>
       </provider>

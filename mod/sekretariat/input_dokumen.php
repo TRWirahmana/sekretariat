@@ -116,11 +116,21 @@ $tahun=date("Y");
             <div class="control-group">
                 <label class="control-label span7">Tanggal Masuk</label>
                 <div class="controls">
-                    <input type="text" name="tgl_masuk" value="<?php echo $tgl_masuk;?>" size="10"/>
+                    <input type="text" name="tgl_masuk" id="tanggal_masuk" value="<?php echo $tgl_masuk;?>" size="10"/>
                     <script language="JavaScript">
-                        new tcal ({
-                            'formname': 'form',
-                            'controlname': 'tgl_masuk'
+                        $(function(){
+                            $('#tanggal_masuk').datepicker({
+                                inline:true,
+                                showOtherMonths: true,
+                                altField: "#tanggal_surat",
+                                altFormat: "yy-mm-dd",
+                                dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                                onSelect: function(dateText){
+                                    $('#tanggal_surat').html(dateText);
+                                }
+                            });
                         });
                     </script>
                 </div>
@@ -134,9 +144,22 @@ $tahun=date("Y");
             </div>
 
             <div class="control-group">
+                <label class="control-label span7">Keterangan</label>
+                <div class="controls">
+                    <textarea rows=4 cols=30 name="keterangan"><?php echo $keterangan;?></textarea>
+                </div>
+            </div>
+
+        </div>
+
+        <!--right content-->
+        <div clas="span12">
+
+            <div class="control-group">
                 <label class="control-label span7">Yang Menyerahkan</label>
                 <div class="controls">
                     <input type="text" name="pembawa" value="<?php echo $pembawa;?>" size="35"/>
+
                 </div>
             </div>
 
@@ -151,10 +174,6 @@ $tahun=date("Y");
                 </div>
             </div>
 
-        </div>
-
-        <!--right content-->
-        <div clas="span12">
             <div class="control-group">
                 <label class="control-label span7">Tujuan Dokumen</label>
                 <div class="controls">
@@ -165,11 +184,21 @@ $tahun=date("Y");
             <div class="control-group">
                 <label class="control-label span7">Tanggal Keluar (dari Karo)</label>
                 <div class="controls">
-                    <input type="text" name="tgl_keluar" value="<?php echo $tgl_keluar;?>" size="10"/>
+                    <input type="text" name="tgl_keluar" id="tanggal_keluar" value="<?php echo $tgl_keluar;?>" size="10"/>
                     <script language="JavaScript">
-                        new tcal ({
-                            'formname': 'form',
-                            'controlname': 'tgl_keluar'
+                        $(function(){
+                            $('#tanggal_keluar').datepicker({
+                                inline:true,
+                                showOtherMonths: true,
+                                altField: "#tanggal_surat",
+                                altFormat: "yy-mm-dd",
+                                dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                                onSelect: function(dateText){
+                                    $('#tanggal_surat').html(dateText);
+                                }
+                            });
                         });
                     </script>
                 </div>
@@ -182,12 +211,7 @@ $tahun=date("Y");
                 </div>
             </div>
 
-            <div class="control-group">
-                <label class="control-label span7">Keterangan</label>
-                <div class="controls">
-                    <textarea rows=4 cols=30 name="keterangan"><?php echo $keterangan;?></textarea>
-                </div>
-            </div>
+
 
             <div class="control-group">
                 <label class="control-label span7">Status</label>

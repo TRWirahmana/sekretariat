@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="template/sekretariat/style.css">
 <script language="JavaScript" src="inc/Calendar/calendar_db.js"></script>
-	<link rel="stylesheet" href="inc/Calendar/calendar.css">
+<link rel="stylesheet" href="inc/Calendar/calendar.css">
 
 <script>
 //    document.title = "Layanan Biro Hukum dan Organisasi | Status Usulan Bantuan Hukum";

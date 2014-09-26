@@ -49,12 +49,22 @@ $send_url = "index.php?_mod=$_mod&task=admin_surat_baru";
 	<table>
 		   <tr><td width="150px">Perihal/Nomor Agenda/No surat/Tanggal</td><td><input type="text" name="key" value="" size="35"/></td></tr>
 		   <tr><td width="150px">Tanggal Surat</td>
-			<td><input type="text" name="tgl_surat" value="" size="10"/><script language="JavaScript">
-	new tcal ({
-		'formname': 'form',
-		'controlname': 'tgl_surat'
-	});
-	</script>
+			<td><input type="text" name="tgl_surat" id="date" value="" size="10"/> <script language="JavaScript">
+                    $(function(){
+                        $('#date').datepicker({
+                            inline:true,
+                            showOtherMonths: true,
+                            altField: "#date",
+                            altFormat: "yy-mm-dd",
+                            dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                            onSelect: function(dateText){
+                                $('#date').html(dateText);
+                            }
+                        });
+                    });
+                </script>
 			    
 			</td>
 			</tr>

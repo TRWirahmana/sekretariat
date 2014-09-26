@@ -51,12 +51,22 @@ $send_url = "index.php?_mod=$_mod&task=admin_undangan";
 	<table>
 		   <tr><td width="150px">Acara/Nomor Agenda/No Undangan</td><td><input type="text" name="key" value="" size="35"/></td></tr>
 		   <tr><td width="150px">Tanggal Terima</td>
-			<td><input type="text" name="tgl_terima" value="" size="10"/><script language="JavaScript">
-	new tcal ({
-		'formname': 'form',
-		'controlname': 'tgl_terima'
-	});
-	</script>
+			<td><input type="text" name="tgl_terima" id="date" value="" size="10"/> <script language="JavaScript">
+                    $(function(){
+                        $('#date').datepicker({
+                            inline:true,
+                            showOtherMonths: true,
+                            altField: "#date",
+                            altFormat: "yy-mm-dd",
+                            dateFormat: "yy-mm-dd",
+//                                changeMonth: true,
+//                                changeYear: true,
+                            onSelect: function(dateText){
+                                $('#date').html(dateText);
+                            }
+                        });
+                    });
+                </script>
 			    
 			</td>
 			</tr>
